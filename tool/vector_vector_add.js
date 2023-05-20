@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-var matrix_size_1 = 3;//100;
-var matrix_size_2 = 5;//400;
+var matrix_size_1 = 100;
+var matrix_size_2 = 400;
 var hedder_0 = '`define size_minus_1(x) (x-1)';
 var hedder_1 = '`define matrix_size_1 ';
 var hedder_2 = '`define matrix_size_2 ';
