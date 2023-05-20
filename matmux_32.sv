@@ -3,7 +3,7 @@
 `define matrix_size_2 5
 `define vector_size `matrix_size_1
 
-module matrix_times_vector_genED_M_3_5_V_3 (
+module matmux_32 (
 input logic signed [31:0] matrix[0:`size_minus_1(`matrix_size_1)][0:`size_minus_1(`matrix_size_2)],
 input logic signed [31:0] vector[0:`size_minus_1(`vector_size)],
 input logic signed [31:0] b[0:`size_minus_1(`matrix_size_2)],
