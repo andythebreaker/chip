@@ -9,6 +9,7 @@ module mxv (
   output logic signed [31:0] result[0:`size_minus_1(`matrix_size_2)]
 );
 
+//0~matrix_size_2], {(matrix_size_1],~matrix_size_2]~)*(matrix_size_1])}...
   assign result[0] = matrix[0][0] * vector[0] + matrix[1][0] * vector[1] + matrix[2][0] * vector[2];
   assign result[1] = matrix[0][1] * vector[0] + matrix[1][1] * vector[1] + matrix[2][1] * vector[2];
   assign result[2] = matrix[0][2] * vector[0] + matrix[1][2] * vector[1] + matrix[2][2] * vector[2];
