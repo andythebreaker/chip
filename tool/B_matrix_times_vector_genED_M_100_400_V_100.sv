@@ -3,7 +3,7 @@
 `define matrix_size_2 400
 `define vector_size `matrix_size_1
 
-module matrix_times_vector_genED_M_100_400_V_100 (
+module B_matrix_times_vector_genED_M_100_400_V_100 (
 input logic signed [31:0] matrix[0:`size_minus_1(`matrix_size_1)][0:`size_minus_1(`matrix_size_2)],
 input logic signed [31:0] vector[0:`size_minus_1(`vector_size)],
 output logic signed [31:0] result[0:`size_minus_1(`matrix_size_2)]
