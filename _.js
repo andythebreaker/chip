@@ -27,8 +27,9 @@ fs.appendFile(`matrix_times_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_$
 for (let index = 0; index < matrix_size_2; index++) {
     var tmp=`assign result[${index}] = `;
     for (let j = 0; j < matrix_size_1; j++) {
-        tmp+=`matrix[${j}][${index}] * vector[${j}] ${j+1<matrix_size_1?'+':';\n'} `;
+        tmp+=`matrix[${j}][${index}] * vector[${j}] ${j+1<matrix_size_1?'+':('+b['+String(index)+']')}`;
     }
+    tmp+=';\n';
     fs.appendFile(`matrix_times_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1}.sv`, tmp, (err) => {
         if (err) {
             console.error(err);
