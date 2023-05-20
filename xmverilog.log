@@ -1,5 +1,5 @@
 xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xmverilog	22.03-s003: Started on May 20, 2023 at 20:54:52 CST
+TOOL:	xmverilog	22.03-s003: Started on May 20, 2023 at 21:23:46 CST
 ncverilog
 	tanh_tb.sv
 	+access+r
@@ -22302,6 +22302,6 @@ xcelium> run
  2146016352,  2147483647
  2147016352,  2147483647
 Simulation complete via $finish(1) at time 222920 NS + 0
-./tanh_tb.sv:22309         $finish;
+./tanh_tb.sv:22310         $finish;
 xcelium> exit
-TOOL:	xmverilog	22.03-s003: Exiting on May 20, 2023 at 20:54:53 CST  (total: 00:00:01)
+TOOL:	xmverilog	22.03-s003: Exiting on May 20, 2023 at 21:23:46 CST  (total: 00:00:00)

@@ -13,7 +13,8 @@ module tanh_tb; reg signed [31:0] x; wire signed [31:0] y; tanh dut (.x(x),
     
     // Stimulus
     initial begin
-        #10;x=-2147483648;
+        
+#10;x=-2147483648;
 #10;x=-2146483648;
 #10;x=-2145483648;
 #10;x=-2144483648;

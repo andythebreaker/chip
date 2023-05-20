@@ -63,3 +63,6 @@ s62(20May2023:20:38:44):  ncverilog tanh_tb.sv +access+r
 s63(20May2023:20:54:12):  ncverilog tanh.sv 
 s64(20May2023:20:54:16):  ncverilog tanh_tb.sv +access+r 
 s65(20May2023:20:54:52):  ncverilog tanh_tb.sv +access+r 
+s66(20May2023:21:23:19):  ncverilog tanh.sv 
+s67(20May2023:21:23:26):  ncverilog tanh_tb.sv +access+r 
+s68(20May2023:21:23:46):  ncverilog tanh_tb.sv +access+r 
