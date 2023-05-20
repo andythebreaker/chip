@@ -43,3 +43,16 @@ vector_vector_add.js
 #### 驗證文件
 
 https://hackmd.io/oMyZzflqT6amguTnJ4ZhAw#vv
+
+## realtime test data
+
+每 6 row 為 1 epoch
+
+|row num|var|
+|--|--|
+|1|x|
+|2|h-prev|
+|3|c-prev|
+|4|Wx|
+|5|Wh|
+|6|b|
