@@ -3,10 +3,11 @@
 `include "a0.sv"
 
 module a3(
-    input logic signed [5:0] x1,
+    /*input logic signed [5:0] x1,
     input logic signed [5:0] y1,
     input logic signed [5:0] x2,
-    input logic signed [5:0] y2,
+    input logic signed [5:0] y2,*/
+    input logic signed [5:0] ary[0:1][0:1];
     output logic signed [5:0] z
 );
 

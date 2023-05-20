@@ -12,7 +12,7 @@ input logic signed [31:0] Wx[0:`size_minus_1(`matrix_size_1)][0:`size_minus_1(`m
 input logic signed [31:0] h_prev[0:`size_minus_1(`matrix_size_1)],
 input logic signed [31:0] Wh[0:`size_minus_1(`matrix_size_1)][0:`size_minus_1(`matrix_size_2)],
 input logic signed [31:0] b[0:`size_minus_1(`matrix_size_2)],
-input logic clk,
+//input logic clk,
 output logic signed [31:0] A[0:`size_minus_1(`matrix_size_2)]
 );
 
