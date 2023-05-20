@@ -1,0 +1,7 @@
+s1(20May2023:14:54:54):  ncverilog a0.sv 
+s2(20May2023:14:55:08):  ncverilog a1.sv 
+s3(20May2023:14:55:20):  ncverilog a2.sv 
+s4(20May2023:14:55:23):  ncverilog a3.sv 
+s5(20May2023:14:56:10):  ncverilog a1.sv 
+s6(20May2023:14:56:11):  ncverilog a3.sv 
+s7(20May2023:14:56:28):  ncverilog tb.sv +access+r 

@@ -1,0 +1,148 @@
+xmsim(64) 22.03-s003
+Linux 5.13.0-40-generic #45~20.04.1-Ubuntu SMP Mon Apr 4 09:38:31 UTC 2022 x86_64
+CPU cores: 48
+Limit information:
+======================================
+cputime			unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		8192 kbytes
+coredumpsize	0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		1048576
+memorylocked	65536 kbytes
+maxproc			514465
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+MACHTYPE=x86_64
+USER=aoc_036
+SSH_CLIENT=140.116.133.20 5066 22
+LC_TIME=lzh_TW
+XDG_SESSION_TYPE=tty
+SHLVL=3
+VENDOR=unknown
+MOTD_SHOWN=pam
+HOME=/home/AOC2023/aoc2023_036
+CONDA_SHLVL=0
+LC_MONETARY=lzh_TW
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1315/bus
+GROUP=aoc_036
+_CONDA_ROOT=/home/AOC2023/aoc2023_036/anaconda3
+LOGNAME=aoc_036
+_=/home/AOC2023/aoc2023_036/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/bin/code-server
+XDG_SESSION_CLASS=user
+XDG_SESSION_ID=25824
+PATH=/usr/cad/synopsys/verdi/2019.06//bin:/usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/bin/64bit:/usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/bin:/home/AOC2023/aoc2023_036/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/riscv/bin
+LC_ADDRESS=lzh_TW
+XDG_RUNTIME_DIR=/run/user/1315
+LANG=en_US.UTF-8
+LC_TELEPHONE=lzh_TW
+CONDA_PYTHON_EXE=/home/AOC2023/aoc2023_036/anaconda3/bin/python
+SHELL=/bin/tcsh
+LC_NAME=lzh_TW
+HOST=user
+LC_MEASUREMENT=lzh_TW
+_CONDA_EXE=/home/AOC2023/aoc2023_036/anaconda3/bin/conda
+LC_IDENTIFICATION=lzh_TW
+OSTYPE=linux
+PWD=/home/AOC2023/aoc2023_036/code/chip/test
+CONDA_EXE=/home/AOC2023/aoc2023_036/anaconda3/bin/conda
+SSH_CONNECTION=140.116.133.20 5066 140.116.164.70 22
+LC_NUMERIC=lzh_TW
+LC_PAPER=lzh_TW
+HOSTTYPE=x86_64-linux
+BROWSER=/home/AOC2023/aoc2023_036/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/bin/helpers/browser.sh
+TERM_PROGRAM=vscode
+TERM_PROGRAM_VERSION=1.78.2
+COLORTERM=truecolor
+GIT_ASKPASS=/home/AOC2023/aoc2023_036/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/extensions/git/dist/askpass.sh
+VSCODE_GIT_ASKPASS_NODE=/home/AOC2023/aoc2023_036/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/node
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VSCODE_GIT_ASKPASS_MAIN=/home/AOC2023/aoc2023_036/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/extensions/git/dist/askpass-main.js
+VSCODE_GIT_IPC_HANDLE=/run/user/1315/vscode-git-514ffb0eae.sock
+VSCODE_IPC_HOOK_CLI=/run/user/1315/vscode-ipc-6218976e-e42e-421f-a307-03cf29e8e3ba.sock
+TERM=xterm-256color
+LD_LIBRARY_PATH=/usr/cad/synopsys/verdi/2019.06//share/PLI/IUS/LINUX64
+LM_LICENSE_FILE=26585@lstn:5280@lstn:
+SHLIB_PATH=/usr/cad/synopsys/verdi/2019.06//etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2019.06//share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/:
+VERDI_HOME=/usr/cad/synopsys/verdi/2019.06/
+_XRUNROOT_=/usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools
+_IRUNROOT_=/usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools
+_HELIUMROOT_=/usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools
+CDS_ARCH=lnx86
+XMRUNMODE=xmverilog:./xcelium.d/run.lnx8664.22.03.d
+XRUNBATCH=FALSE
+AMS_LOG_FILE_NAME=xmverilog.log
+IMPERAS_PORT_FILE=.vsp_ovp_gdb_port
+TCL_LIBRARY=/usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/inca/files/tcl/library
+Runtime command line arguments:
+argv[0]=xmverilog
+argv[1]=tb.sv
+argv[2]=+access+r
+84 profile - 100
+          CPU/Mem usage: 0.020 sys,  0.030 user,  107.86M sys,  0.00M vm
+85 VC callback profile - scalar:0 vector:0
+86 Sat May 20 14:56:29 2023
+87 pliAppInit
+88 FSDB_GATE is disabled.
+89 Enable Parallel Dumping.
+90 pliAppMiscSet: New Sim Round
+91 pliEntryInit
+92 LIBSSCORE=found /usr/cad/synopsys/verdi/2019.06//share/PLI/IUS/LINUX64/libsscore_xcelium171.so through $LD_LIBRARY_PATH setting.
+93 argv[0]: astest.fsdb
+94 argv[0]: +all
+95 FSDB Dumper for Xcelium, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+96 (C) 1996 - 2019 by Synopsys, Inc.
+97 ***********************************************************************
+98 *  WARNING -                                                          *
+99 *  The simulator version is newer than the FSDB Writer version which  *
+100 *  may cause abnormal behavior, please contact Cadence support for    *
+101 *  assistance.                                                        *
+102 ***********************************************************************
+103 sps_call_fsdbDumpfile at 0 : /home/AOC2023/aoc2023_036/code/chip/test/tb.sv(14)
+104 argv[0]: astest.fsdb
+105 *Verdi* : Create FSDB file 'astest.fsdb'
+106 sps_call_fsdbDumpvars at 0 : /home/AOC2023/aoc2023_036/code/chip/test/tb.sv(15)
+107 argv[0]: +all
+108 *Verdi* : Begin traversing the scopes, layer (0).
+109 *Verdi* : Enable +all dumping.
+110 *Verdi* : End of traversing.
+111 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.020 sys,  0.030 user,  194.74M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  3.72M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  3.72M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  3.72M sys,  0.00M vm
+
+          Count usage: 21 var,  17 idcode,  17 callback
+                 incr: 21 var,  17 idcode,  17 callback
+                 accu: 21 var,  17 idcode,  17 callback
+            accu incr: 21 var,  17 idcode,  17 callback
+112 VC callback profile - scalar:0 vector:0
+113 Sat May 20 14:56:29 2023
+114 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.020 sys,  0.030 user,  195.93M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  1.19M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  4.91M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  1.19M sys,  0.00M vm
+
+          Count usage: 21 var,  17 idcode,  17 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 21 var,  17 idcode,  17 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+115 VC callback profile - scalar:0 vector:17
+116 Sat May 20 14:56:29 2023
+117 End of simulation at 30
+118 VC callback profile - scalar:0 vector:34
+119 Sat May 20 14:56:29 2023
+120 Begin FSDB profile info:
+121 FSDB Writer : bc1(0) bcn(34) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.012452) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+FSDB Writer cpu time : MT Compression : 0
+122 End FSDB profile info
+123 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
+124                        ProduceTime:0.065204409 ConsumerTime:0.000000000 Buffer:64MB
+125 SimExit
+126 Sim process exit

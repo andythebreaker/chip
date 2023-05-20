@@ -1,0 +1,79 @@
+xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xmverilog	22.03-s003: Started on May 20, 2023 at 14:56:28 CST
+ncverilog
+	tb.sv
+	+access+r
+xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+file: tb.sv
+	module worklib.a1:sv
+		errors: 0, warnings: 0
+endmodule;
+         |
+xmvlog: *W,UEXPSC (a1.sv,9|9): Ignored unexpected semicolon following SystemVerilog description keyword (endmodule).
+	module worklib.a2:sv
+		errors: 0, warnings: 0
+endmodule;
+         |
+xmvlog: *W,UEXPSC (a2.sv,9|9): Ignored unexpected semicolon following SystemVerilog description keyword (endmodule).
+	module worklib.a0:sv
+		errors: 0, warnings: 0
+endmodule;
+         |
+xmvlog: *W,UEXPSC (a0.sv,9|9): Ignored unexpected semicolon following SystemVerilog description keyword (endmodule).
+	module worklib.a3:sv
+		errors: 0, warnings: 0
+endmodule;
+         |
+xmvlog: *W,UEXPSC (a3.sv,36|9): Ignored unexpected semicolon following SystemVerilog description keyword (endmodule).
+	module worklib.tb:sv
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 4
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.a0:sv <0x4f2cbb48>
+			streams:   1, words:   201
+		worklib.a2:sv <0x3733099c>
+			streams:   1, words:   201
+		worklib.a1:sv <0x42c5d2b0>
+			streams:   1, words:   201
+		worklib.a3:sv <0x1fe3db6c>
+			streams:   5, words:  1291
+		worklib.tb:sv <0x15e7d3e1>
+			streams:   3, words:  2489
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              5       5
+		Registers:           11      11
+		Vectored wires:      17       -
+		Initial blocks:       2       2
+		Cont. assignments:    3       3
+		Pseudo assignments:   6       6
+	Writing initial simulation snapshot: worklib.tb:sv
+Loading snapshot worklib.tb:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_xcelium171.so
+xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/xcelium/files/xmsimrc
+xcelium> run
+FSDB Dumper for Xcelium, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+***********************************************************************
+*  WARNING -                                                          *
+*  The simulator version is newer than the FSDB Writer version which  *
+*  may cause abnormal behavior, please contact Cadence support for    *
+*  assistance.                                                        *
+***********************************************************************
+*Verdi* : Create FSDB file 'astest.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+...
+Simulation complete via $finish(1) at time 30 NS + 0
+./tb.sv:35     #10$finish;
+xcelium> exit
+TOOL:	xmverilog	22.03-s003: Exiting on May 20, 2023 at 14:56:29 CST  (total: 00:00:01)
