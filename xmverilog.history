@@ -52,3 +52,14 @@ s51(20May2023:18:37:55):  ncverilog tanh_tb.sv +access+r
 s52(20May2023:18:40:11):  ncverilog tanh_tb.sv +access+r 
 s53(20May2023:18:40:14):  ncverilog tanh.sv 
 s54(20May2023:18:40:15):  ncverilog tanh_tb.sv +access+r 
+s55(20May2023:20:29:08):  ncverilog tanh.sv 
+s56(20May2023:20:29:56):  ncverilog tanh_tb.sv +access+r 
+s57(20May2023:20:30:25):  ncverilog tanh.sv 
+s58(20May2023:20:30:27):  ncverilog tanh_tb.sv +access+r 
+s59(20May2023:20:36:35):  ncverilog tanh.sv 
+s60(20May2023:20:36:38):  ncverilog tanh_tb.sv +access+r 
+s61(20May2023:20:38:42):  ncverilog tanh.sv 
+s62(20May2023:20:38:44):  ncverilog tanh_tb.sv +access+r 
+s63(20May2023:20:54:12):  ncverilog tanh.sv 
+s64(20May2023:20:54:16):  ncverilog tanh_tb.sv +access+r 
+s65(20May2023:20:54:52):  ncverilog tanh_tb.sv +access+r 
