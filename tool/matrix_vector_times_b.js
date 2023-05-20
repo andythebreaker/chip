@@ -13,7 +13,7 @@ var hedder_7 = 'input logic signed [31:0] vector[0:`size_minus_1(`vector_size)],
 var hedder_8 = 'output logic signed [31:0] result[0:`size_minus_1(`matrix_size_2)]';
 var hedder_9 = ');';
 var hedder_10 = hedder_4 + '\n' + hedder_5 + '\n' + hedder_6 + '\n' + hedder_7 + '\n' + hedder_8 + '\n' + hedder_9 + '\n';
-fs.appendFileSync(`matrix_times_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1}.sv`, hedder_10, (err) => {
+fs.appendFileSync(`B_matrix_times_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1}.sv`, hedder_10, (err) => {
     if (err) {
         console.error(err);
     } else {
@@ -26,7 +26,7 @@ for (let index = 0; index < matrix_size_2; index++) {
         tmp+=`matrix[${j}][${index}] * vector[${j}] ${j+1<matrix_size_1?'+':('+b['+String(index)+']')}`;
     }
     tmp+=';\n';
-    fs.appendFileSync(`matrix_times_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1}.sv`, tmp, (err) => {
+    fs.appendFileSync(`B_matrix_times_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1}.sv`, tmp, (err) => {
         if (err) {
             console.error(err);
         } else {
@@ -34,7 +34,7 @@ for (let index = 0; index < matrix_size_2; index++) {
         }
     });
 }
-fs.appendFileSync(`matrix_times_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1}.sv`, '\nendmodule\n', (err) => {
+fs.appendFileSync(`B_matrix_times_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1}.sv`, '\nendmodule\n', (err) => {
     if (err) {
         console.error(err);
     } else {
