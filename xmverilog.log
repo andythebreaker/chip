@@ -1,57 +1,54 @@
 xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xmverilog	22.03-s003: Started on May 20, 2023 at 17:36:14 CST
+TOOL:	xmverilog	22.03-s003: Started on May 20, 2023 at 18:40:15 CST
 ncverilog
-	tb.sv
+	tanh_tb.sv
 	+access+r
 xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
-file: tb.sv
-	module worklib.tb:sv
+file: tanh_tb.sv
+	module worklib.tanh:sv
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.vector_add_vector_genED_M_100_400_V_100:sv <0x57da4531>
-			streams: 400, words: 156306
-		worklib.B_matrix_times_vector_genED_M_100_400_V_100:sv <0x74ee332c>
-			streams: 400, words: 2704291
-		worklib.matrix_times_vector_genED_M_100_400_V_100:sv <0x627a070e>
-			streams: 400, words: 2693488
-		worklib.vmvmb:sv <0x10c4e994>
-			streams:  10, words: 11199
-		worklib.tb:sv <0x7922e053>
-			streams:   8, words: 140453
+		worklib.tanh:sv <0x0980e028>
+			streams:   1, words:  4678
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
-		                Instances  Unique
-		Modules:                5       5
-		Registers:             24      24
-		Vectored wires:      1216       -
-		Initial blocks:         2       2
-		Cont. assignments:   1200    1200
-		Pseudo assignments:    16      16
-	Writing initial simulation snapshot: worklib.tb:sv
-Loading snapshot worklib.tb:sv .................... Done
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           4       4
+		Vectored wires:      2       -
+		Always blocks:       2       2
+		Initial blocks:      2       2
+		Pseudo assignments:  1       1
+	Writing initial simulation snapshot: worklib.tanh_tb:sv
+Loading snapshot worklib.tanh_tb:sv .................... Done
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 *Verdi* Loading libsscore_xcelium171.so
 xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/xcelium/files/xmsimrc
 xcelium> run
-FSDB Dumper for Xcelium, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
-(C) 1996 - 2019 by Synopsys, Inc.
-***********************************************************************
-*  WARNING -                                                          *
-*  The simulator version is newer than the FSDB Writer version which  *
-*  may cause abnormal behavior, please contact Cadence support for    *
-*  assistance.                                                        *
-***********************************************************************
-*Verdi* : Create FSDB file 'tb_6data.fsdb'
-*Verdi* : Begin traversing the scopes, layer (0).
-*Verdi* : Enable +all dumping.
-*Verdi* : End of traversing.
-EOF
-Simulation complete via $finish(1) at time 30 NS + 0
-./tb.sv:225     #10$finish;
+          0 case1
+x =           0, y =           0
+        100 case1
+x =         100, y =         100
+        100 case1
+x =        -100, y =        -100
+   51000000 case2
+x =   -51000000, y =     -500000
+   51000000 case2
+x =    51000000, y =    50500000
+  121000000 case3
+x =  -121000000, y =    54875000
+  121000000 case3
+x =   121000000, y =    85125000
+  241000000 case5
+x =  -241000000, y = -2147483648
+  241000000 case4
+x =   241000000, y =  2147483647
+Simulation complete via $finish(1) at time 90 NS + 0
+./tanh_tb.sv:54     $finish;
 xcelium> exit
-TOOL:	xmverilog	22.03-s003: Exiting on May 20, 2023 at 17:36:55 CST  (total: 00:00:41)
+TOOL:	xmverilog	22.03-s003: Exiting on May 20, 2023 at 18:40:16 CST  (total: 00:00:01)

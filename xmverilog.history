@@ -40,3 +40,15 @@ s39(20May2023:17:25:33):  ncverilog tool/vector_add_vector_genED_M_100_400_V_100
 s40(20May2023:17:26:11):  ncverilog tool/matrix_times_vector_genED_M_100_400_V_100.sv 
 s41(20May2023:17:26:58):  ncverilog vmvmb.sv 
 s42(20May2023:17:36:14):  ncverilog tb.sv +access+r 
+s43(20May2023:18:25:42):  ncverilog tanh.sv 
+s44(20May2023:18:29:57):  ncverilog tanh_tb.sv +access+r 
+s45(20May2023:18:32:07):  ncverilog tanh_tb.sv +access+r 
+s46(20May2023:18:35:35):  ncverilog tanh.sv 
+s47(20May2023:18:35:36):  ncverilog tanh_tb.sv +access+r 
+s48(20May2023:18:36:59):  ncverilog tanh.sv 
+s49(20May2023:18:37:01):  ncverilog tanh_tb.sv +access+r 
+s50(20May2023:18:37:54):  ncverilog tanh.sv 
+s51(20May2023:18:37:55):  ncverilog tanh_tb.sv +access+r 
+s52(20May2023:18:40:11):  ncverilog tanh_tb.sv +access+r 
+s53(20May2023:18:40:14):  ncverilog tanh.sv 
+s54(20May2023:18:40:15):  ncverilog tanh_tb.sv +access+r 

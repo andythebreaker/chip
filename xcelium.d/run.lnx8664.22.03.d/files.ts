@@ -13,3 +13,5 @@
 1684559585 /home/AOC2023/aoc2023_036/code/chip/tool/matrix_times_vector_genED_M_100_400_V_100.sv
 1684570967 /home/AOC2023/aoc2023_036/code/chip/vmvmb.sv
 1684575299 /home/AOC2023/aoc2023_036/code/chip/tb.sv
+1684579209 /home/AOC2023/aoc2023_036/code/chip/tanh.sv
+1684578725 /home/AOC2023/aoc2023_036/code/chip/tanh_tb.sv
