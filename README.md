@@ -42,4 +42,4 @@ vector_vector_add.js
 
 #### 驗證文件
 
-?
+https://hackmd.io/oMyZzflqT6amguTnJ4ZhAw#vv
