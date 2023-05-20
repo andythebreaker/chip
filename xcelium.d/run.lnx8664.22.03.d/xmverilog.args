@@ -2,5 +2,5 @@
 // File created by:  xmverilog
 // Do not modify this file
 //
-matmux_37_tb.sv
+tb.sv
 +access+r
