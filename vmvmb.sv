@@ -27,8 +27,12 @@ B_matrix_times_vector_genED_M_100_400_V_100 bmtv(
     Wh,h_prev,b,bmtv_out
 );
 
-always @(posedge clk) begin
+vector_add_vector_genED_M_100_400_V_100 vav(
+mtv_out,bmtv_out,A
+);
+
+//always @(posedge clk) begin
     
-end
+//end
 
 endmodule
