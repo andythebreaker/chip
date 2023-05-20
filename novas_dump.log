@@ -83,9 +83,9 @@ argv[0]=xmverilog
 argv[1]=matmux_37_tb.sv
 argv[2]=+access+r
 84 profile - 100
-          CPU/Mem usage: 0.040 sys,  0.020 user,  107.82M sys,  0.00M vm
+          CPU/Mem usage: 0.020 sys,  0.030 user,  107.81M sys,  0.00M vm
 85 VC callback profile - scalar:0 vector:0
-86 Sat May 20 13:23:15 2023
+86 Sat May 20 13:33:09 2023
 87 pliAppInit
 88 FSDB_GATE is disabled.
 89 Enable Parallel Dumping.
@@ -112,7 +112,7 @@ argv[2]=+access+r
 110 *Verdi* : Enable +all dumping.
 111 *Verdi* : End of traversing.
 112 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.040 sys,  0.020 user,  195.01M sys,  0.00M vm
+          CPU/Mem usage: 0.030 sys,  0.030 user,  195.01M sys,  0.00M vm
                    incr: 0.000 sys,  0.000 user,  4.05M sys,  0.00M vm
                    accu: 0.000 sys,  0.000 user,  4.05M sys,  0.00M vm
               accu incr: 0.000 sys,  0.000 user,  4.05M sys,  0.00M vm
@@ -122,9 +122,9 @@ argv[2]=+access+r
                  accu: 30 var,  30 idcode,  30 callback
             accu incr: 30 var,  30 idcode,  30 callback
 113 VC callback profile - scalar:0 vector:0
-114 Sat May 20 13:23:15 2023
+114 Sat May 20 13:33:09 2023
 115 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.040 sys,  0.020 user,  196.07M sys,  0.00M vm
+          CPU/Mem usage: 0.030 sys,  0.030 user,  196.07M sys,  0.00M vm
                    incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
                    accu: 0.000 sys,  0.000 user,  5.10M sys,  0.00M vm
               accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
@@ -134,16 +134,16 @@ argv[2]=+access+r
                  accu: 30 var,  30 idcode,  30 callback
             accu incr: 0 var,  0 idcode,  0 callback
 116 VC callback profile - scalar:0 vector:30
-117 Sat May 20 13:23:15 2023
+117 Sat May 20 13:33:09 2023
 118 End of simulation at 20
 119 VC callback profile - scalar:0 vector:60
-120 Sat May 20 13:23:15 2023
+120 Sat May 20 13:33:09 2023
 121 Begin FSDB profile info:
 122 FSDB Writer : bc1(0) bcn(60) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.012031) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+FSDB Writer elapsed time : flush(0.011896) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 123 End FSDB profile info
 124 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
-125                        ProduceTime:0.077691267 ConsumerTime:0.000000000 Buffer:64MB
+125                        ProduceTime:0.067056915 ConsumerTime:0.000000000 Buffer:64MB
 126 SimExit
 127 Sim process exit

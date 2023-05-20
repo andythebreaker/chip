@@ -6,5 +6,5 @@
 1684560190 /home/AOC2023/aoc2023_036/code/chip/matmux_37_tb.sv
 1684546020 /home/AOC2023/aoc2023_036/code/andy_chip/matmux_35_tb.sv
 1684541490 /home/AOC2023/aoc2023_036/code/andy_chip/fa.sv
-1684559956 /home/AOC2023/aoc2023_036/code/chip/matmux_32.sv
+1684560783 /home/AOC2023/aoc2023_036/code/chip/matmux_32.sv
 1684546381 /home/AOC2023/aoc2023_036/code/andy_chip/matmux_32.sv

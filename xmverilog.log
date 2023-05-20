@@ -1,22 +1,14 @@
 xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xmverilog	22.03-s003: Started on May 20, 2023 at 13:23:15 CST
+TOOL:	xmverilog	22.03-s003: Started on May 20, 2023 at 13:33:09 CST
 ncverilog
 	matmux_37_tb.sv
 	+access+r
 xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
-file: matmux_37_tb.sv
-	module worklib.mxv_TB_2:sv
-		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 		Caching library 'worklib' ....... Done
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.matmux_32:sv <0x78b5da95>
-			streams:   5, words:  1885
-		worklib.mxv_TB_2:sv <0x3ac21f02>
-			streams:   5, words:  6137
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -50,4 +42,4 @@ FSDB Dumper for Xcelium, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
 Simulation complete via $finish(1) at time 20 NS + 0
 ./matmux_37_tb.sv:40     #10$finish;
 xcelium> exit
-TOOL:	xmverilog	22.03-s003: Exiting on May 20, 2023 at 13:23:15 CST  (total: 00:00:00)
+TOOL:	xmverilog	22.03-s003: Exiting on May 20, 2023 at 13:33:09 CST  (total: 00:00:00)
