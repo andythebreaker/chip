@@ -63,7 +63,7 @@ VSCODE_GIT_ASKPASS_NODE=/home/AOC2023/aoc2023_036/.vscode-server/bin/b3e4e68a0bc
 VSCODE_GIT_ASKPASS_EXTRA_ARGS=
 VSCODE_GIT_ASKPASS_MAIN=/home/AOC2023/aoc2023_036/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/extensions/git/dist/askpass-main.js
 VSCODE_GIT_IPC_HANDLE=/run/user/1315/vscode-git-33a6acae3c.sock
-VSCODE_IPC_HOOK_CLI=/run/user/1315/vscode-ipc-a22f2679-5b54-4135-a042-10eae2294d65.sock
+VSCODE_IPC_HOOK_CLI=/run/user/1315/vscode-ipc-b5cbf313-8c45-48f1-b117-704ef9906f80.sock
 TERM=xterm-256color
 LD_LIBRARY_PATH=/usr/cad/synopsys/verdi/2019.06//share/PLI/IUS/LINUX64
 LM_LICENSE_FILE=26585@lstn:5280@lstn:
@@ -80,15 +80,69 @@ IMPERAS_PORT_FILE=.vsp_ovp_gdb_port
 TCL_LIBRARY=/usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/inca/files/tcl/library
 Runtime command line arguments:
 argv[0]=xmverilog
-argv[1]=vmvmb.sv
-83 profile - 100
-          CPU/Mem usage: 0.040 sys,  0.040 user,  134.09M sys,  0.00M vm
-84 VC callback profile - scalar:0 vector:0
-85 Sat May 20 17:27:00 2023
-86 pliAppInit
-87 FSDB_GATE is disabled.
-88 Enable Parallel Dumping.
-89 pliAppMiscSet: New Sim Round
-90 pliEntryInit
-91 LIBSSCORE=found /usr/cad/synopsys/verdi/2019.06//share/PLI/IUS/LINUX64/libsscore_xcelium171.so through $LD_LIBRARY_PATH setting.
-92 Sim process exit
+argv[1]=tb.sv
+argv[2]=+access+r
+84 profile - 100
+          CPU/Mem usage: 0.060 sys,  0.040 user,  163.95M sys,  0.00M vm
+85 VC callback profile - scalar:0 vector:0
+86 Sat May 20 17:36:25 2023
+87 pliAppInit
+88 FSDB_GATE is disabled.
+89 Enable Parallel Dumping.
+90 pliAppMiscSet: New Sim Round
+91 pliEntryInit
+92 LIBSSCORE=found /usr/cad/synopsys/verdi/2019.06//share/PLI/IUS/LINUX64/libsscore_xcelium171.so through $LD_LIBRARY_PATH setting.
+93 argv[0]: tb_6data.fsdb
+94 argv[0]: +all
+95 FSDB Dumper for Xcelium, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+96 (C) 1996 - 2019 by Synopsys, Inc.
+97 ***********************************************************************
+98 *  WARNING -                                                          *
+99 *  The simulator version is newer than the FSDB Writer version which  *
+100 *  may cause abnormal behavior, please contact Cadence support for    *
+101 *  assistance.                                                        *
+102 ***********************************************************************
+103 sps_call_fsdbDumpfile at 0 : /home/AOC2023/aoc2023_036/code/chip/tb.sv(15)
+104 argv[0]: tb_6data.fsdb
+105 *Verdi* : Create FSDB file 'tb_6data.fsdb'
+106 sps_call_fsdbDumpvars at 0 : /home/AOC2023/aoc2023_036/code/chip/tb.sv(16)
+107 argv[0]: +all
+108 *Verdi* : Begin traversing the scopes, layer (0).
+109 *Verdi* : Enable +all dumping.
+110 *Verdi* : End of traversing.
+111 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.100 sys,  0.410 user,  290.50M sys,  0.00M vm
+                   incr: 0.040 sys,  0.370 user,  43.38M sys,  0.00M vm
+                   accu: 0.040 sys,  0.370 user,  43.38M sys,  0.00M vm
+              accu incr: 0.040 sys,  0.370 user,  43.38M sys,  0.00M vm
+
+          Count usage: 245400 var,  245400 idcode,  245406 callback
+                 incr: 245400 var,  245400 idcode,  245406 callback
+                 accu: 245400 var,  245400 idcode,  245406 callback
+            accu incr: 245400 var,  245400 idcode,  245406 callback
+112 VC callback profile - scalar:0 vector:0
+113 Sat May 20 17:36:25 2023
+114 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.100 sys,  0.870 user,  306.54M sys,  0.00M vm
+                   incr: 0.000 sys,  0.460 user,  16.04M sys,  0.00M vm
+                   accu: 0.040 sys,  0.830 user,  59.42M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.460 user,  16.04M sys,  0.00M vm
+
+          Count usage: 245400 var,  245400 idcode,  245406 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 245400 var,  245400 idcode,  245406 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+115 VC callback profile - scalar:0 vector:245400
+116 Sat May 20 17:36:26 2023
+117 End of simulation at 30
+118 VC callback profile - scalar:0 vector:490800
+119 Sat May 20 17:36:55 2023
+120 Begin FSDB profile info:
+121 FSDB Writer : bc1(0) bcn(490800) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.122697) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+FSDB Writer cpu time : MT Compression : 0
+122 End FSDB profile info
+123 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:1 BlockUsed:3
+124                        ProduceTime:30.013390155 ConsumerTime:0.034687792 Buffer:64MB
+125 SimExit
+126 Sim process exit

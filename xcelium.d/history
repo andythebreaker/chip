@@ -43,3 +43,4 @@ s38::(20May2023:17:24:04):( ncverilog tool/B_matrix_times_vector_genED_M_100_400
 s39::(20May2023:17:25:33):( ncverilog tool/vector_add_vector_genED_M_100_400_V_100.sv )
 s40::(20May2023:17:26:11):( ncverilog tool/matrix_times_vector_genED_M_100_400_V_100.sv )
 s41::(20May2023:17:26:58):( ncverilog vmvmb.sv )
+s42::(20May2023:17:36:14):( ncverilog tb.sv +access+r )
