@@ -48,7 +48,7 @@ LC_MEASUREMENT=lzh_TW
 _CONDA_EXE=/home/AOC2023/aoc2023_036/anaconda3/bin/conda
 LC_IDENTIFICATION=lzh_TW
 OSTYPE=linux
-PWD=/home/AOC2023/aoc2023_036/code/chip
+PWD=/home/AOC2023/aoc2023_036/git/chip
 CONDA_EXE=/home/AOC2023/aoc2023_036/anaconda3/bin/conda
 SSH_CONNECTION=140.116.133.20 5066 140.116.164.70 22
 LC_NUMERIC=lzh_TW
@@ -62,8 +62,8 @@ GIT_ASKPASS=/home/AOC2023/aoc2023_036/.vscode-server/bin/b3e4e68a0bc097f0ae7907b
 VSCODE_GIT_ASKPASS_NODE=/home/AOC2023/aoc2023_036/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/node
 VSCODE_GIT_ASKPASS_EXTRA_ARGS=
 VSCODE_GIT_ASKPASS_MAIN=/home/AOC2023/aoc2023_036/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/extensions/git/dist/askpass-main.js
-VSCODE_GIT_IPC_HANDLE=/run/user/1315/vscode-git-33a6acae3c.sock
-VSCODE_IPC_HOOK_CLI=/run/user/1315/vscode-ipc-b5cbf313-8c45-48f1-b117-704ef9906f80.sock
+VSCODE_GIT_IPC_HANDLE=/run/user/1315/vscode-git-ba61a69ac6.sock
+VSCODE_IPC_HOOK_CLI=/run/user/1315/vscode-ipc-cc17a9c5-7ccc-4b76-9556-bbc495afcbd6.sock
 TERM=xterm-256color
 LD_LIBRARY_PATH=/usr/cad/synopsys/verdi/2019.06//share/PLI/IUS/LINUX64
 LM_LICENSE_FILE=26585@lstn:5280@lstn:
@@ -80,16 +80,15 @@ IMPERAS_PORT_FILE=.vsp_ovp_gdb_port
 TCL_LIBRARY=/usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/inca/files/tcl/library
 Runtime command line arguments:
 argv[0]=xmverilog
-argv[1]=tanh_tb.sv
-argv[2]=+access+r
-84 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.030 user,  113.85M sys,  0.00M vm
-85 VC callback profile - scalar:0 vector:0
-86 Sat May 20 21:23:46 2023
-87 pliAppInit
-88 FSDB_GATE is disabled.
-89 Enable Parallel Dumping.
-90 pliAppMiscSet: New Sim Round
-91 pliEntryInit
-92 LIBSSCORE=found /usr/cad/synopsys/verdi/2019.06//share/PLI/IUS/LINUX64/libsscore_xcelium171.so through $LD_LIBRARY_PATH setting.
-93 Sim process exit
+argv[1]=tanh.sv
+83 profile - 100
+          CPU/Mem usage: 0.040 sys,  0.020 user,  107.79M sys,  0.00M vm
+84 VC callback profile - scalar:0 vector:0
+85 Sun May 21 22:50:11 2023
+86 pliAppInit
+87 FSDB_GATE is disabled.
+88 Enable Parallel Dumping.
+89 pliAppMiscSet: New Sim Round
+90 pliEntryInit
+91 LIBSSCORE=found /usr/cad/synopsys/verdi/2019.06//share/PLI/IUS/LINUX64/libsscore_xcelium171.so through $LD_LIBRARY_PATH setting.
+92 Sim process exit
