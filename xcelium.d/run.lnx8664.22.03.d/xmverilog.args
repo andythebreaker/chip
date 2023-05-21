@@ -2,4 +2,5 @@
 // File created by:  xmverilog
 // Do not modify this file
 //
-tanh.sv
+tanh_tb.sv
++access+r

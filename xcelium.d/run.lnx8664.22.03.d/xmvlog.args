@@ -5,7 +5,7 @@
 -XLMODE
 ./xcelium.d/run.lnx8664.22.03.d
 -RUNMODE
-tanh.sv
+tanh_tb.sv
 -CDSLIB
 ./xcelium.d/run.lnx8664.22.03.d/cdsrun.lib
 -HDLVAR
