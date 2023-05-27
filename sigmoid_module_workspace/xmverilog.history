@@ -1,0 +1,5 @@
+s1(27May2023:22:22:06):  ncverilog sigmoid.sv 
+s2(27May2023:22:22:16):  ncverilog sigmoid.sv 
+s3(27May2023:22:22:45):  ncverilog sigmoid.sv 
+s4(27May2023:22:23:39):  ncverilog sigmoid.sv 
+s5(27May2023:22:23:39):  ncverilog gen_int_32_full_range_tb.sv +access+r 
