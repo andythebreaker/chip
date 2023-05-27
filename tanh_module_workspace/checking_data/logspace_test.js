@@ -1,6 +1,6 @@
-const startPoint = -2147483648;
-const endPoint = 2147483647;
-const numPoints = 10000;
+const startPoint = -2147483648.0;
+const endPoint = 2147483647.0;
+const numPoints = 10000.0;
 
 const logspacePoints = [];
 const logStart = Math.log10(startPoint);
