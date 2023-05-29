@@ -82,9 +82,9 @@ Runtime command line arguments:
 argv[0]=xmverilog
 argv[1]=long_non_linear_shape_100_400_tanh.sv
 83 profile - 100
-          CPU/Mem usage: 0.020 sys,  0.040 user,  107.86M sys,  0.00M vm
+          CPU/Mem usage: 0.040 sys,  0.020 user,  107.86M sys,  0.00M vm
 84 VC callback profile - scalar:0 vector:0
-85 Mon May 29 20:14:56 2023
+85 Mon May 29 20:35:56 2023
 86 pliAppInit
 87 FSDB_GATE is disabled.
 88 Enable Parallel Dumping.

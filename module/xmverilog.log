@@ -1,36 +1,31 @@
 xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xmverilog	22.03-s003: Started on May 29, 2023 at 20:14:56 CST
+TOOL:	xmverilog	22.03-s003: Started on May 29, 2023 at 20:36:30 CST
 ncverilog
-	long_non_linear_shape_100_400_tanh.sv
+	fgio.sv
 xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
-file: long_non_linear_shape_100_400_tanh.sv
-	module worklib.tanh:sv
+file: fgio.sv
+`define adj_t 10
+                |
+xmvlog: *W,MACRDF (../sigmoid_module_workspace/sigmoid.sv,26|16): text macro 'adj_t' redefined - replaced with new definition, Previous definition was found here ('../sigmoid_module_workspace/sigmoid.sv',1|13 ).
+(`include file: ../sigmoid_module_workspace/sigmoid.sv line 26, `include file: ./long_non_linear_shape_100_400_sigmoid.sv line 7, file: fgio.sv line 8)
+`define adj_t 21
+                |
+xmvlog: *W,MACRDF (../tanh_module_workspace/tanh.sv,1|16): text macro 'adj_t' redefined - replaced with new definition, Previous definition was found here ('../sigmoid_module_workspace/sigmoid.sv',26|13 ).
+	module worklib.fgio:sv
 		errors: 0, warnings: 0
-	module worklib.long_non_linear_shape_100_400_tanh:sv
-		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.tanh:sv <0x149062f8>
-			streams:   0, words:     0
-		worklib.long_non_linear_shape_100_400_tanh:sv <0x06639771>
-			streams:   0, words:     0
-	Building instance specific data structures.
-	Loading native compiled code:     .................... Done
-	Design hierarchy summary:
-		           Instances  Unique
-		Modules:         101       2
-		Registers:       202       4
-		Vectored wires:  200       -
-		Always blocks:   100       1
-	Writing initial simulation snapshot: worklib.long_non_linear_shape_100_400_tanh:sv
-Loading snapshot worklib.long_non_linear_shape_100_400_tanh:sv .................... Done
-xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-*Verdi* Loading libsscore_xcelium171.so
-xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/xcelium/files/xmsimrc
-xcelium> run
-xmsim: *W,RNQUIE: Simulation is complete.
-xcelium> exit
-TOOL:	xmverilog	22.03-s003: Exiting on May 29, 2023 at 20:14:56 CST  (total: 00:00:00)
+vector_add_vector_genED_M_100_400_V_100 add_c(a,b,c_next);
+                                              |
+xmelab: *E,TYCMPAT (./fgio.sv,46|46): port or terminal connection type check failed on instance 'fgio' (expecting datatype compatible with 'unpacked array [0:399] of integer' but found 'unpacked array [0:99] of integer' instead).
+vector_add_vector_genED_M_100_400_V_100 add_c(a,b,c_next);
+                                                |
+xmelab: *E,TYCMPAT (./fgio.sv,46|48): port or terminal connection type check failed on instance 'fgio' (expecting datatype compatible with 'unpacked array [0:399] of integer' but found 'unpacked array [0:99] of integer' instead).
+vector_add_vector_genED_M_100_400_V_100 add_c(a,b,c_next);
+                                                       |
+xmelab: *E,TYCMPAT (./fgio.sv,46|55): port or terminal connection type check failed on instance 'fgio' (expecting datatype compatible with 'unpacked array [0:99] of integer' but found 'unpacked array [0:399] of integer' instead).
+xmverilog: *E,ELBERR: Error (*E) or soft error (*SE) occurred during elaboration (status 1), exiting.
+TOOL:	xmverilog	22.03-s003: Exiting on May 29, 2023 at 20:36:30 CST  (total: 00:00:00)
