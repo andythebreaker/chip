@@ -1,2 +1,4 @@
 *.pak
 xcelium.d
+./xmverilog.log
+./xmverilog.history
