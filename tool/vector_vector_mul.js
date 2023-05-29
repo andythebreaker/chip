@@ -1,5 +1,7 @@
 const fs = require('fs');
 //max min of int32
+var one10_8=(10**8);
+var zoom_small=one10_8/2;
 var max_int32 = 2147483647;
 var min_int32 = -2147483648;
 
@@ -26,7 +28,7 @@ fs.appendFileSync(`vector_mul_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V
 for (let index = 0; index < matrix_size_1; index++) {//!important:this is 100, not 400; 400 is vec+vec; this is vec*vec, so is 100!
     var tmp=`assign result[${index}] = `;
     //for (let j = 0; j < matrix_size_1; j++) {
-        tmp+=`a[${index}] * ( b[${index}] / ${max_int32} )`;
+        tmp+=`( a[${index}] / ${zoom_small} ) * ( b[${index}] / ${Math.round(max_int32/zoom_small)} )`;
     //}
     tmp+=';\n';
     fs.appendFileSync(`vector_mul_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1}.sv`, tmp, (err) => {
