@@ -1,48 +1,85 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>File Download</title>
+    <title>File Download</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.js"></script>
 </head>
+
 <body>
-  <button onclick="downloadFile()">Download File</button>
+    <!--<h1>向量對向量加法生成 (檔案請下載後放在根目錄/tool資料夾下) (會生成sv檔案) (標準尺寸 向量尺寸:100 ； 矩陣尺寸(另一側):400 )</h1>
+    <h4>向量尺寸</h4>
+    <input type="number" id="numUpDown" value="100">
+    <h4>矩陣尺寸(另一側)</h4>
+    <input type="number" id="numUpDown2" value="400">
+    <h4>生成...</h4>
+    <button onclick="downloadFile()">Download File</button>-->
+    <h1 class="ui header">向量對向量加法生成 (檔案請下載後放在根目錄/tool資料夾下) (會生成sv檔案) (標準尺寸 向量尺寸:100 ； 矩陣尺寸(另一側):400 )</h1>
 
-  <script>
-    function downloadFile() {
-      var fs = '`define size_minus_1(x) (x-1)';
-      var matrix_size_1 = 100;
-      var matrix_size_2 = 400;
-      var hedder_0 = '`define size_minus_1(x) (x-1)';
-      var hedder_1 = '`define matrix_size_1 ';
-      var hedder_2 = '`define matrix_size_2 ';
-      var hedder_3 = '`define vector_size `matrix_size_1';
-      var hedder_4 = hedder_0 + '\n' + hedder_1 + String(matrix_size_1) + '\n' + hedder_2 + String(matrix_size_2) + '\n' + hedder_3 + '\n';
-      var hedder_5 = `module vector_add_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1} (`;
-      var hedder_6 = 'input logic signed [31:0] a[0:`size_minus_1(`matrix_size_2)],';
-      var hedder_7 = 'input logic signed [31:0] b[0:`size_minus_1(`matrix_size_2)],';
-      var hedder_8 = 'output logic signed [31:0] result[0:`size_minus_1(`matrix_size_2)]';
-      var hedder_9 = ');';
-      var hedder_10 = hedder_4 + '\n' + hedder_5 + '\n' + hedder_6 + '\n' + hedder_7 + '\n' + hedder_8 + '\n' + hedder_9 + '\n';
-      var content = hedder_10;
+    <h4 class="ui header">向量尺寸</h4>
+    <div class="ui input">
+        <input type="number" id="numUpDown" value="100">
+    </div>
 
-      for (let index = 0; index < matrix_size_2; index++) {
-        var tmp = `assign result[${index}] = `;
-        //for (let j = 0; j < matrix_size_1; j++) {
-        tmp += `a[${index}] + b[${index}]`;
-        //}
-        tmp += ';\n';
-        content += tmp;
-      }
+    <h4 class="ui header">矩陣尺寸(另一側)</h4>
+    <div class="ui input">
+        <input type="number" id="numUpDown2" value="400">
+    </div>
 
-      content += '\nendmodule\n';
+    <div class="ui checkbox">
+        <input type="checkbox" name="example">
+        <label>勾就是tanh沒勾就是sigmoid</label>
+    </div>
 
-      var element = document.createElement('a');
-      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
-      element.setAttribute('download', `vector_add_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1}.sv`);
-      element.style.display = 'none';
-      document.body.appendChild(element);
-      element.click();
-      document.body.removeChild(element);
-    }
-  </script>
+    <h4 class="ui header">生成...</h4>
+    <button class="ui primary button" onclick="downloadFile()">Download File</button>
+
+
+    <script>
+        function downloadFile() {
+            //get value of numUpDown
+            var numUpDown = document.getElementById("numUpDown").value;
+            //get value of numUpDown2
+            var numUpDown2 = document.getElementById("numUpDown2").value;
+
+            var fs = '`define size_minus_1(x) (x-1)';
+            var matrix_size_1 = numUpDown;//100;
+            var matrix_size_2 = numUpDown2;//400;
+            var hedder_0 = '`define size_minus_1(x) (x-1)';
+            var hedder_1 = '`define matrix_size_1 ';
+            var hedder_2 = '`define matrix_size_2 ';
+            var hedder_3 = '`define vector_size `matrix_size_1';
+            var hedder_4 = hedder_0 + '\n' + hedder_1 + String(matrix_size_1) + '\n' + hedder_2 + String(matrix_size_2) + '\n' + hedder_3 + '\n';
+            var hedder_5 = `module vector_add_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1} (`;
+            var hedder_6 = 'input logic signed [31:0] a[0:`size_minus_1(`matrix_size_2)],';
+            var hedder_7 = 'input logic signed [31:0] b[0:`size_minus_1(`matrix_size_2)],';
+            var hedder_8 = 'output logic signed [31:0] result[0:`size_minus_1(`matrix_size_2)]';
+            var hedder_9 = ');';
+            var hedder_10 = hedder_4 + '\n' + hedder_5 + '\n' + hedder_6 + '\n' + hedder_7 + '\n' + hedder_8 + '\n' + hedder_9 + '\n';
+            var content = hedder_10;
+
+            for (let index = 0; index < matrix_size_2; index++) {
+                var tmp = `assign result[${index}] = `;
+                //for (let j = 0; j < matrix_size_1; j++) {
+                tmp += `a[${index}] + b[${index}]`;
+                //}
+                tmp += ';\n';
+                content += tmp;
+            }
+
+            content += '\nendmodule\n';
+
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
+            element.setAttribute('download', `vector_add_vector_genED_M_${matrix_size_1}_${matrix_size_2}_V_${matrix_size_1}.sv`);
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
 </body>
+
 </html>
