@@ -3,8 +3,8 @@ const fs = require('fs');
 var max_int32 = 2147483647;
 var min_int32 = -2147483648;
 
-var matrix_size_1 = 100;
-var matrix_size_2 = 400;
+var matrix_size_1 = 5;//100
+var matrix_size_2 = 400;//400
 var hedder_0 = '`define size_minus_1(x) (x-1)';
 var hedder_1 = '`define matrix_size_1 ';
 var hedder_2 = '`define matrix_size_2 ';
