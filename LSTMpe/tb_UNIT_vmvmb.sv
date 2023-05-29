@@ -1,5 +1,5 @@
 `include "vmvmb.sv"
-//!important had been modifyed by human VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+
     //========== this a testbench driven by 6 data in a group from python gen txt =========
     module tb;
     logic signed [31:0] x[0:99];
