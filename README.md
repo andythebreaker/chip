@@ -1,5 +1,18 @@
 # chip
 
+這東西可以做單元測試
+
+![圖片](https://github.com/andythebreaker/chip/assets/43373581/2148f4c4-0d0f-47f9-8f86-66bf35dbbef3)
+
+![圖片](https://github.com/andythebreaker/chip/assets/43373581/86c63c6b-f0d4-4915-8bc5-15994ac5f9c9)
+
+應該是一鍵執行
+
+建議在conda環境
+
+會輸出CSV檔案
+
+
 ## stat
 
 ### before repo
