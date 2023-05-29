@@ -1,6 +1,6 @@
 # chip
 
-![圖片](https://github.com/andythebreaker/chip/assets/43373581/70eef3e3-e22b-49d8-af05-554bf2682861)
+![圖片](https://github.com/andythebreaker/chip/assets/43373581/d2f969ba-13dc-474d-b79d-abdbc7d355d9)
 
 ![圖片](https://github.com/andythebreaker/chip/assets/43373581/24100dac-a40e-497c-852e-ee74f28638f4)
 
