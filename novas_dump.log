@@ -80,11 +80,11 @@ IMPERAS_PORT_FILE=.vsp_ovp_gdb_port
 TCL_LIBRARY=/usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/inca/files/tcl/library
 Runtime command line arguments:
 argv[0]=xmverilog
-argv[1]=tool/matrix_times_vector_genED_M_100_400_V_100.sv
+argv[1]=tool/vector_add_vector_genED_M_100_400_V_100.sv
 83 profile - 100
-          CPU/Mem usage: 0.040 sys,  0.030 user,  120.54M sys,  0.00M vm
+          CPU/Mem usage: 0.040 sys,  0.010 user,  107.45M sys,  0.00M vm
 84 VC callback profile - scalar:0 vector:0
-85 Mon May 29 16:00:23 2023
+85 Mon May 29 16:00:47 2023
 86 pliAppInit
 87 FSDB_GATE is disabled.
 88 Enable Parallel Dumping.
