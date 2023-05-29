@@ -2,5 +2,4 @@
 // File created by:  xmverilog
 // Do not modify this file
 //
-tanh_tb.sv
-+access+r
+tool/B_matrix_times_vector_genED_M_100_400_V_100.sv
