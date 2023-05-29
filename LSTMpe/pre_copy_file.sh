@@ -1,0 +1,10 @@
+cp ../module/fgio.sv .
+cp ../tool/B_matrix_times_vector_genED_M_100_400_V_100.sv .
+cp ../tool/matrix_times_vector_genED_M_100_400_V_100.sv .
+cp ../tool/vector_add_vector_genED_M_100_400_X_400.sv .
+cp ../module/long_non_linear_shape_100_400_sigmoid.sv .
+cp ../module/long_non_linear_shape_100_400_tanh.sv .
+cp ../tool/vector_add_vector_genED_X_100_400_V_100.sv .
+cp ../tool/vector_mul_vector_genED_M_100_400_V_100.sv .
+cp ../sigmoid_module_workspace/sigmoid.sv .
+cp ../tanh_module_workspace/tanh.sv .
