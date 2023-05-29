@@ -5,3 +5,5 @@ s4(29May2023:20:35:50):  ncverilog long_non_linear_shape_100_400_sigmoid.sv
 s5(29May2023:20:35:56):  ncverilog long_non_linear_shape_100_400_tanh.sv 
 s6(29May2023:20:36:03):  ncverilog fgio.sv 
 s7(29May2023:20:36:30):  ncverilog fgio.sv 
+s8(29May2023:23:33:46):  ncverilog fgio.sv 
+s9(29May2023:23:34:58):  ncverilog fgio.sv 

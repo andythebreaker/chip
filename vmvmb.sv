@@ -4,7 +4,7 @@
 `define vector_size `matrix_size_1
 `include "tool/B_matrix_times_vector_genED_M_100_400_V_100.sv"
 `include "tool/matrix_times_vector_genED_M_100_400_V_100.sv"
-`include "tool/vector_add_vector_genED_M_100_400_V_100.sv"
+`include "tool/vector_add_vector_genED_M_100_400_X_400.sv"
 
 module vmvmb (
 input logic signed [31:0] x[0:`size_minus_1(`matrix_size_1)],
@@ -27,7 +27,7 @@ B_matrix_times_vector_genED_M_100_400_V_100 bmtv(
     Wh,h_prev,b,bmtv_out
 );
 
-vector_add_vector_genED_M_100_400_V_100 vav(
+vector_add_vector_genED_M_100_400_X_400 vav(
 mtv_out,bmtv_out,A
 );
 
