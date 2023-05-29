@@ -85,7 +85,7 @@ argv[2]=+access+r
 84 profile - 100
           CPU/Mem usage: 0.030 sys,  0.030 user,  107.81M sys,  0.00M vm
 85 VC callback profile - scalar:0 vector:0
-86 Mon May 29 17:30:34 2023
+86 Mon May 29 18:33:47 2023
 87 pliAppInit
 88 FSDB_GATE is disabled.
 89 Enable Parallel Dumping.
@@ -104,13 +104,14 @@ argv[2]=+access+r
 102 ***********************************************************************
 103 sps_call_fsdbDumpfile at 0 : /home/AOC2023/aoc2023_036/git/chip/tool/tmptest/tb_vMv5.sv(16)
 104 argv[0]: tb_6data.fsdb
-105 *Verdi* : Create FSDB file 'tb_6data.fsdb'
-106 sps_call_fsdbDumpvars at 0 : /home/AOC2023/aoc2023_036/git/chip/tool/tmptest/tb_vMv5.sv(17)
-107 argv[0]: +all
-108 *Verdi* : Begin traversing the scopes, layer (0).
-109 *Verdi* : Enable +all dumping.
-110 *Verdi* : End of traversing.
-111 fsdbDumpvars traverse var: profile - 
+105 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+106 *Verdi* : Create FSDB file 'tb_6data.fsdb'
+107 sps_call_fsdbDumpvars at 0 : /home/AOC2023/aoc2023_036/git/chip/tool/tmptest/tb_vMv5.sv(17)
+108 argv[0]: +all
+109 *Verdi* : Begin traversing the scopes, layer (0).
+110 *Verdi* : Enable +all dumping.
+111 *Verdi* : End of traversing.
+112 fsdbDumpvars traverse var: profile - 
           CPU/Mem usage: 0.040 sys,  0.030 user,  195.01M sys,  0.00M vm
                    incr: 0.000 sys,  0.000 user,  4.04M sys,  0.00M vm
                    accu: 0.000 sys,  0.000 user,  4.04M sys,  0.00M vm
@@ -120,9 +121,9 @@ argv[2]=+access+r
                  incr: 30 var,  30 idcode,  30 callback
                  accu: 30 var,  30 idcode,  30 callback
             accu incr: 30 var,  30 idcode,  30 callback
-112 VC callback profile - scalar:0 vector:0
-113 Mon May 29 17:30:34 2023
-114 fsdbDumpvars: profile - 
+113 VC callback profile - scalar:0 vector:0
+114 Mon May 29 18:33:47 2023
+115 fsdbDumpvars: profile - 
           CPU/Mem usage: 0.040 sys,  0.030 user,  196.06M sys,  0.00M vm
                    incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
                    accu: 0.000 sys,  0.000 user,  5.09M sys,  0.00M vm
@@ -132,17 +133,17 @@ argv[2]=+access+r
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 30 var,  30 idcode,  30 callback
             accu incr: 0 var,  0 idcode,  0 callback
-115 VC callback profile - scalar:0 vector:30
-116 Mon May 29 17:30:34 2023
-117 End of simulation at 30
-118 VC callback profile - scalar:0 vector:60
-119 Mon May 29 17:30:34 2023
-120 Begin FSDB profile info:
-121 FSDB Writer : bc1(0) bcn(60) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.015918) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+116 VC callback profile - scalar:0 vector:30
+117 Mon May 29 18:33:47 2023
+118 End of simulation at 30
+119 VC callback profile - scalar:0 vector:60
+120 Mon May 29 18:33:47 2023
+121 Begin FSDB profile info:
+122 FSDB Writer : bc1(0) bcn(60) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.012804) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-122 End FSDB profile info
-123 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
-124                        ProduceTime:0.082513568 ConsumerTime:0.000000000 Buffer:64MB
-125 SimExit
-126 Sim process exit
+123 End FSDB profile info
+124 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
+125                        ProduceTime:0.081714727 ConsumerTime:0.000000000 Buffer:64MB
+126 SimExit
+127 Sim process exit
