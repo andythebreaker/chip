@@ -1,0 +1,23 @@
+xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xmverilog	22.03-s003: Started on May 29, 2023 at 17:24:39 CST
+ncverilog
+	tb_vMv5.sv
+	+access+r
+xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+file: tb_vMv5.sv
+	module worklib.tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+vector_mul_vector_genED_M_5_400_V_5 dut (a,b,c);
+                                         |
+xmelab: *E,TYCMPAT (./tb_vMv5.sv,13|41): port or terminal connection type check failed on instance 'tb' (expecting datatype compatible with 'unpacked array [0:399] of integer' but found 'unpacked array [0:4] of integer' instead).
+vector_mul_vector_genED_M_5_400_V_5 dut (a,b,c);
+                                           |
+xmelab: *E,TYCMPAT (./tb_vMv5.sv,13|43): port or terminal connection type check failed on instance 'tb' (expecting datatype compatible with 'unpacked array [0:399] of integer' but found 'unpacked array [0:4] of integer' instead).
+vector_mul_vector_genED_M_5_400_V_5 dut (a,b,c);
+                                             |
+xmelab: *E,TYCMPAT (./tb_vMv5.sv,13|45): port or terminal connection type check failed on instance 'tb' (expecting datatype compatible with 'unpacked array [0:4] of integer' but found 'unpacked array [0:399] of integer' instead).
+xmverilog: *E,ELBERR: Error (*E) or soft error (*SE) occurred during elaboration (status 1), exiting.
+TOOL:	xmverilog	22.03-s003: Exiting on May 29, 2023 at 17:24:39 CST  (total: 00:00:00)
