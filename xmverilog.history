@@ -2,3 +2,4 @@ s1(21May2023:22:50:10):  ncverilog tanh.sv
 s2(21May2023:22:56:35):  ncverilog tanh_tb.sv +access+r 
 s3(21May2023:22:58:41):  ncverilog tanh_tb.sv +access+r 
 s4(29May2023:15:59:30):  ncverilog tool/B_matrix_times_vector_genED_M_100_400_V_100.sv 
+s5(29May2023:16:00:22):  ncverilog tool/matrix_times_vector_genED_M_100_400_V_100.sv 

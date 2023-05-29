@@ -1,32 +1,32 @@
 xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xmverilog	22.03-s003: Started on May 29, 2023 at 15:59:30 CST
+TOOL:	xmverilog	22.03-s003: Started on May 29, 2023 at 16:00:22 CST
 ncverilog
-	tool/B_matrix_times_vector_genED_M_100_400_V_100.sv
+	tool/matrix_times_vector_genED_M_100_400_V_100.sv
 xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
-file: tool/B_matrix_times_vector_genED_M_100_400_V_100.sv
-	module worklib.B_matrix_times_vector_genED_M_100_400_V_100:sv
+file: tool/matrix_times_vector_genED_M_100_400_V_100.sv
+	module worklib.matrix_times_vector_genED_M_100_400_V_100:sv
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.B_matrix_times_vector_genED_M_100_400_V_100:sv <0x6c881d3f>
+		worklib.matrix_times_vector_genED_M_100_400_V_100:sv <0x0d0e47e8>
 			streams:   0, words:     0
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		              Instances  Unique
 		Modules:              1       1
-		Registers:            4       4
+		Registers:            3       3
 		Vectored wires:     400       -
 		Cont. assignments:    0     400
-	Writing initial simulation snapshot: worklib.B_matrix_times_vector_genED_M_100_400_V_100:sv
-Loading snapshot worklib.B_matrix_times_vector_genED_M_100_400_V_100:sv .................... Done
+	Writing initial simulation snapshot: worklib.matrix_times_vector_genED_M_100_400_V_100:sv
+Loading snapshot worklib.matrix_times_vector_genED_M_100_400_V_100:sv .................... Done
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 *Verdi* Loading libsscore_xcelium171.so
 xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/xcelium/files/xmsimrc
 xcelium> run
 xmsim: *W,RNQUIE: Simulation is complete.
 xcelium> exit
-TOOL:	xmverilog	22.03-s003: Exiting on May 29, 2023 at 15:59:32 CST  (total: 00:00:02)
+TOOL:	xmverilog	22.03-s003: Exiting on May 29, 2023 at 16:00:23 CST  (total: 00:00:01)
