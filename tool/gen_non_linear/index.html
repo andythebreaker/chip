@@ -63,21 +63,21 @@
 \`define matrix_size_2 ${Number(numUpDown2.val())}
 \`define vector_size \`matrix_size_1
 
-${stsw.is(':checked') ? '\`include "../tanh_module_workspace/tanh.sv"' : '\`include "../sigmoid_module_workspace/sigmoid.sv"'}
-module long_non_linear_shape_${Number(numUpDown.val())}_${Number(numUpDown2.val())}_${stsw.is(':checked') ? "tanh" : "sigmoid"} (
+${stsw[0].classList.contains('checked')  ? '\`include "../tanh_module_workspace/tanh.sv"' : '\`include "../sigmoid_module_workspace/sigmoid.sv"'}
+module long_non_linear_shape_${Number(numUpDown.val())}_${Number(numUpDown2.val())}_${stsw[0].classList.contains('checked')  ? "tanh" : "sigmoid"} (
     input logic signed [31:0] x[0:\`size_minus_1(\`vector_size)],    
     output logic signed [31:0] y[0:\`size_minus_1(\`vector_size)]
 `;
             var sector2 = '';
             for (let index = 0; index < Number(numUpDown.val()); index++) {
-                sector2 += `${stsw.is(':checked') ? "tanh" : "sigmoid"} dux${index}(x[${index}], y[${index}]);
+                sector2 += `${stsw[0].classList.contains('checked')  ? "tanh" : "sigmoid"} dux${index}(x[${index}], y[${index}]);
     `;
             }
 
             var sector3 = `
 endmodule
 `;
-            textBox.val(sector1 +');'+ sector2 + sector3);
+            textBox.val(sector1 + ');' + sector2 + sector3);
         });
 
         // When the download button is clicked, download the text from the text input
@@ -85,7 +85,7 @@ endmodule
             var text = textBox.val();
             var link = document.createElement("a");
             link.href = "data:text/plain;charset=utf-8," + encodeURIComponent(text);
-            link.download = `long_non_linear_shape_${Number(numUpDown.val())}_${Number(numUpDown2.val())}_${stsw.is(':checked') ? "tanh" : "sigmoid"}.sv`;
+            link.download = `long_non_linear_shape_${Number(numUpDown.val())}_${Number(numUpDown2.val())}_${stsw[0].classList.contains('checked')  ? "tanh" : "sigmoid"}.sv`;
             document.body.appendChild(link);
             link.click();
         });
