@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSV Reorganization</title>
+</head>
+
+<body>
+    <label for="numberInput">Number:</label>
+    <input type="number" id="numberInput" name="numberInput" value="10" min="0" max="100" step="1">
+    <textarea id="csvInput" rows="4" cols="50">1,2,3,4,5,6
+11,12,13,14,15,16</textarea><br>
+    <button onclick="reorganizeCSV()">Reorganize CSV</button><br>
+    <textarea id="csvOutput" rows="4" cols="50" readonly></textarea>
+    <script type="text/javascript">
+        function reorganizeCSV() {
+            var input = document.getElementById("csvInput").value;
+            var lines = input.split("\n");
+            var output = "";
+var three= parseInt( document.getElementById("numberInput").value,10);
+console.log(three);
+var oo={x:[],y:[]};
+            for (var i = 0; i < lines.length; i++) {
+                console.log(i);
+                var values = lines[i].split(",");
+                var tmp=[];
+                for (var j = 0; j < values.length; j++) {
+                    console.log(j);
+                    if ((j+1) % three == 0||j+1==values.length) {
+                        tmp.push(values[j]);
+                        if(i==0){
+                        oo.x.push(tmp);
+                        }else{
+                        oo.y.push(tmp);
+                        }
+                        tmp=[];
+                    }else{
+tmp.push(values[j]);
+                    }
+                    console.log(oo);
+                }
+            }
+            console.log(oo);
+for(var i=0;i<oo.x.length;i++){
+    for(var j=0;j<oo.x[i].length;j++){
+        output+=oo.x[i][j]+",";
+    }output+="\n";
+    for(var j=0;j<oo.y[i].length;j++){
+        output+=oo.y[i][j]+",";
+    }
+    output+="\n";
+}
+            document.getElementById("csvOutput").value = output;
+        }
+    </script>
+</body>
+
+</html>
