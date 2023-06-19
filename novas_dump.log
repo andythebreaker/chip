@@ -84,9 +84,9 @@ argv[0]=xmverilog
 argv[1]=sram_l1cache_tb.sv
 argv[2]=+access+r
 85 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.030 user,  110.08M sys,  0.00M vm
+          CPU/Mem usage: 0.040 sys,  0.010 user,  110.08M sys,  0.00M vm
 86 VC callback profile - scalar:0 vector:0
-87 Mon Jun 19 17:09:29 2023
+87 Mon Jun 19 20:00:56 2023
 88 pliAppInit
 89 FSDB_GATE is disabled.
 90 Enable Parallel Dumping.
@@ -113,38 +113,38 @@ argv[2]=+access+r
 111 *Verdi* : Enable +all dumping.
 112 *Verdi* : End of traversing.
 113 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.040 sys,  0.030 user,  197.55M sys,  0.00M vm
-                   incr: 0.010 sys,  0.000 user,  4.31M sys,  0.00M vm
-                   accu: 0.010 sys,  0.000 user,  4.31M sys,  0.00M vm
-              accu incr: 0.010 sys,  0.000 user,  4.31M sys,  0.00M vm
+          CPU/Mem usage: 0.040 sys,  0.020 user,  197.54M sys,  0.00M vm
+                   incr: 0.000 sys,  0.010 user,  4.31M sys,  0.00M vm
+                   accu: 0.000 sys,  0.010 user,  4.31M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.010 user,  4.31M sys,  0.00M vm
 
-          Count usage: 586 var,  581 idcode,  581 callback
-                 incr: 586 var,  581 idcode,  581 callback
-                 accu: 586 var,  581 idcode,  581 callback
-            accu incr: 586 var,  581 idcode,  581 callback
+          Count usage: 587 var,  583 idcode,  583 callback
+                 incr: 587 var,  583 idcode,  583 callback
+                 accu: 587 var,  583 idcode,  583 callback
+            accu incr: 587 var,  583 idcode,  583 callback
 114 VC callback profile - scalar:0 vector:0
-115 Mon Jun 19 17:09:29 2023
+115 Mon Jun 19 20:00:56 2023
 116 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.040 sys,  0.030 user,  198.60M sys,  0.00M vm
-                   incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
-                   accu: 0.010 sys,  0.000 user,  5.36M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
+          CPU/Mem usage: 0.050 sys,  0.020 user,  198.59M sys,  0.00M vm
+                   incr: 0.010 sys,  0.000 user,  1.05M sys,  0.00M vm
+                   accu: 0.010 sys,  0.010 user,  5.37M sys,  0.00M vm
+              accu incr: 0.010 sys,  0.000 user,  1.05M sys,  0.00M vm
 
-          Count usage: 586 var,  581 idcode,  581 callback
+          Count usage: 587 var,  583 idcode,  583 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 586 var,  581 idcode,  581 callback
+                 accu: 587 var,  583 idcode,  583 callback
             accu incr: 0 var,  0 idcode,  0 callback
-117 VC callback profile - scalar:53 vector:528
-118 Mon Jun 19 17:09:29 2023
-119 End of simulation at 70
-120 VC callback profile - scalar:1008 vector:623
-121 Mon Jun 19 17:09:29 2023
+117 VC callback profile - scalar:54 vector:529
+118 Mon Jun 19 20:00:56 2023
+119 End of simulation at 60
+120 VC callback profile - scalar:377 vector:656
+121 Mon Jun 19 20:00:56 2023
 122 Begin FSDB profile info:
-123 FSDB Writer : bc1(1008) bcn(623) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.013008) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+123 FSDB Writer : bc1(377) bcn(656) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.012685) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 124 End FSDB profile info
 125 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
-126                        ProduceTime:0.076177697 ConsumerTime:0.000000000 Buffer:64MB
+126                        ProduceTime:0.073195633 ConsumerTime:0.000000000 Buffer:64MB
 127 SimExit
 128 Sim process exit

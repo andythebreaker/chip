@@ -51,12 +51,15 @@ module sram_wrap_l1(
     logic signed dbgf;
     logic signed [3:0] clk_count;
 
+    // 1/2 freq. clk.
+    logic signed [3:0] clk_2x;
+
     //assign dbg = ((we==1'b1)&&(csb==1'b0));
     //assign prev_dbg = ((prev_we==1'b1)&&(prev_csb==1'b0));
     //assign dbgf=dbg&(~prev_dbg);
 
     sky130_sram_1kbyte_1rw_32x256_8 sram_1rw_32x256_8_inst(//clk0,csb0,web0,wmask0,spare_wen0,addr0,din0,dout0
-        .clk0(clk),
+        .clk0(clk_2x[1]),
         .csb0(csb),
         .web0(we),
         .wmask0(wmask),
@@ -66,7 +69,7 @@ module sram_wrap_l1(
         .dout0(data_out_temp)
         );
     
-    always @(posedge clk or negedge rst_n) begin
+    always @(posedge clk or negedge clk or negedge rst_n) begin
         if(~rst_n) begin
             data_out <= 32'b0;
             data_ready <= 1'b0;
@@ -79,9 +82,11 @@ module sram_wrap_l1(
             dbg<=8'd0;
             prev_dbg<=8'd0;
             dbgf<=8'd0;
+            clk_2x<=8'd0;
         end
         else begin
-            clk_count=(clk_count==4'd15)?4'd15:(clk_count+4'd1);
+            clk_2x<=(clk_2x==4'd15)?4'd0:(clk_2x+4'd1);
+            clk_count<=(clk_count==4'd15)?4'd15:(clk_count+4'd1);
             prev_we<= we;
             prev_csb<= csb;
             dbg <= ((we==1'b1)&&(csb==1'b0));
