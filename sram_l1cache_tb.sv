@@ -88,7 +88,7 @@ we=1;
 #2 csb=0;
 // wait until data_ready is 1 then fetch data_out, also display in command line
 #2 while((data_ready==0)&&(count<8'd80)) begin
-#2 $display("data_ready is %d",data_ready);
+#1 $display("data_ready is %d",data_ready);
 count=count+1;
 end
 #2 $display("data_out is %d, and the count is %d, data redy %b",data_out,count,data_ready);

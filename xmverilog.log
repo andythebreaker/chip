@@ -1,17 +1,18 @@
 xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xmverilog	22.03-s003: Started on Jun 19, 2023 at 20:00:56 CST
+TOOL:	xmverilog	22.03-s003: Started on Jun 19, 2023 at 20:39:35 CST
 ncverilog
 	sram_l1cache_tb.sv
 	+access+r
 xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+Recompiling... reason: file './sram_l1cache_tb.sv' is newer than expected.
+	expected: Mon Jun 19 17:09:25 2023
+	actual:   Mon Jun 19 20:39:30 2023
 file: sram_l1cache_tb.sv
-	module worklib.sky130_sram_1kbyte_1rw_32x256_8:v
-		errors: 0, warnings: 0
         .din0({0'b0,data_in}),
                |
 xmvlog: *W,MAXBSZ (sram_l1cache.sv,68|15): zero width prefix to based number ignored [2.5(IEEE)].
-	module worklib.sram_wrap_l1:sv
-		errors: 0, warnings: 1
+	module worklib.sram_l1cache_tb:sv
+		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
@@ -23,10 +24,6 @@ xmelab: *W,CUVMPW (./sram_l1cache.sv,69|27): port sizes differ in port connectio
 xmelab: *W,CUVMPW (./sram_l1cache.sv,68|14): port sizes differ in port connection(64/33) for the instance(sram_l1cache_tb.uut) .
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.sky130_sram_1kbyte_1rw_32x256_8:v <0x33d0a572>
-			streams:   3, words:  6997
-		worklib.sram_wrap_l1:sv <0x724b6523>
-			streams:   7, words:  3932
 		worklib.sram_l1cache_tb:sv <0x35d35fbf>
 			streams:   3, words:  9458
 	Building instance specific data structures.
@@ -64,14 +61,19 @@ FSDB Dumper for Xcelium, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
                   18 Writing sram_l1cache_tb.uut.sram_1rw_32x256_8_inst addr0=000110000 din0=000000000000000000000000001001101 wmask0=1111
                   34 Writing sram_l1cache_tb.uut.sram_1rw_32x256_8_inst addr0=000110001 din0=000000000000000000000000000000001 wmask0=1111
 data_ready is 0
+data_ready is 0
                   46 Reading sram_l1cache_tb.uut.sram_1rw_32x256_8_inst addr0=000110000 dout0=000000000000000000000000001001101
 data_ready is 0
 data_ready is 0
+data_ready is 0
+data_ready is 0
                   50 Reading sram_l1cache_tb.uut.sram_1rw_32x256_8_inst addr0=000110000 dout0=000000000000000000000000001001101
+data_ready is 0
+data_ready is 0
 data_ready is 1
-data_out is          x, and the count is    4, data redy 0
                   54 Reading sram_l1cache_tb.uut.sram_1rw_32x256_8_inst addr0=000110000 dout0=000000000000000000000000001001101
-Simulation complete via $finish(1) at time 60 NS + 0
+data_out is         77, and the count is    9, data redy 0
+Simulation complete via $finish(1) at time 61 NS + 0
 ./sram_l1cache_tb.sv:97 #2 $finish;
 xcelium> exit
-TOOL:	xmverilog	22.03-s003: Exiting on Jun 19, 2023 at 20:00:56 CST  (total: 00:00:00)
+TOOL:	xmverilog	22.03-s003: Exiting on Jun 19, 2023 at 20:39:35 CST  (total: 00:00:00)

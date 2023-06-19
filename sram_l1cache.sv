@@ -97,8 +97,9 @@ module sram_wrap_l1(
                     fsm_state<=8'd1;
                 end
                 case (fsm_state)
-                    `HOW_MUCH_CLOCK_TO_WAIT_AFTER_I_SENT_THE_READ_DATA_SIGNAL : data_out <= data_out_temp;
-                    (`HOW_MUCH_CLOCK_TO_WAIT_AFTER_I_SENT_THE_READ_DATA_SIGNAL+8'd1) : data_ready <= 1'b1;
+                    //`HOW_MUCH_CLOCK_TO_WAIT_AFTER_I_SENT_THE_READ_DATA_SIGNAL : data_out <= data_out_temp;
+                    (`HOW_MUCH_CLOCK_TO_WAIT_AFTER_I_SENT_THE_READ_DATA_SIGNAL+8'd1) : data_out <= data_out_temp;
+                    (`HOW_MUCH_CLOCK_TO_WAIT_AFTER_I_SENT_THE_READ_DATA_SIGNAL+8'd2) : data_ready <= 1'b1;
                 endcase
                 case (fsm_state)
                     8'd0: data_ready <= 8'd0;
@@ -108,7 +109,8 @@ module sram_wrap_l1(
                     8'd4: fsm_state <= fsm_state+8'd1;
                     8'd5: fsm_state <= fsm_state+8'd1;
                     `HOW_MUCH_CLOCK_TO_WAIT_AFTER_I_SENT_THE_READ_DATA_SIGNAL : fsm_state <= fsm_state+8'd1;
-                    (`HOW_MUCH_CLOCK_TO_WAIT_AFTER_I_SENT_THE_READ_DATA_SIGNAL+8'd1) : fsm_state <= 8'd0;
+                    (`HOW_MUCH_CLOCK_TO_WAIT_AFTER_I_SENT_THE_READ_DATA_SIGNAL+8'd1) : fsm_state <= fsm_state+8'd1;
+                    (`HOW_MUCH_CLOCK_TO_WAIT_AFTER_I_SENT_THE_READ_DATA_SIGNAL+8'd2) : fsm_state <= 8'd0;
                     default: fsm_state = 8'd0;
                 endcase
             end
