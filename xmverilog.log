@@ -1,0 +1,33 @@
+xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xmverilog	22.03-s003: Started on Jun 19, 2023 at 03:55:50 CST
+ncverilog
+	systolic_array.v
+xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+file: systolic_array.v
+	module worklib.systolic_array:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.block:v <0x13ee19aa>
+			streams:   0, words:     0
+		worklib.systolic_array:v <0x65a288e9>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:             82       2
+		Registers:          245       5
+		Vectored wires:      81       -
+		Always blocks:       82       2
+		Cont. assignments:    0       1
+	Writing initial simulation snapshot: worklib.systolic_array:v
+Loading snapshot worklib.systolic_array:v .................... Done
+*Verdi* Loading libsscore_xcelium171.so
+xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xmverilog	22.03-s003: Exiting on Jun 19, 2023 at 03:55:50 CST  (total: 00:00:00)

@@ -1,0 +1,19 @@
+s1(18Jun2023:10:04:41):  ncverilog memory.sv 
+s2(18Jun2023:10:05:12):  ncverilog memory.sv 
+s3(18Jun2023:10:06:01):  ncverilog memory.sv 
+s4(18Jun2023:10:12:54):  ncverilog memory.sv 
+s5(18Jun2023:10:13:31):  ncverilog memory.sv 
+s6(18Jun2023:10:15:09):  ncverilog memory_tb.sv +access+r 
+s7(18Jun2023:10:15:17):  ncverilog memory_tb.sv +access+r 
+s8(18Jun2023:10:42:04):  ncverilog memory_tb.sv +access+r 
+s9(18Jun2023:11:02:57):  ncverilog memory_tb.sv +access+r 
+s10(19Jun2023:01:51:23):  ncverilog memory_tb.sv +access+r 
+s11(19Jun2023:03:11:53):  ncverilog memory32x20.sv 
+s12(19Jun2023:03:12:24):  ncverilog memory_tb_real_pic.sv +access+r 
+s13(19Jun2023:03:15:20):  ncverilog memory_tb_real_pic.sv +access+r 
+s14(19Jun2023:03:21:55):  ncverilog block.v 
+s15(19Jun2023:03:53:20):  ncverilog block.v 
+s16(19Jun2023:03:53:26):  ncverilog systolic_array.v 
+s17(19Jun2023:03:54:34):  ncverilog systolic_array.v 
+s18(19Jun2023:03:54:55):  ncverilog systolic_array.v 
+s19(19Jun2023:03:55:50):  ncverilog systolic_array.v 
