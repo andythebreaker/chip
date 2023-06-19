@@ -1,33 +1,46 @@
 xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xmverilog	22.03-s003: Started on Jun 19, 2023 at 03:55:50 CST
+TOOL:	xmverilog	22.03-s003: Started on Jun 19, 2023 at 14:41:54 CST
 ncverilog
-	systolic_array.v
+	sram_l1cache.sv
 xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
-file: systolic_array.v
-	module worklib.systolic_array:v
+Recompiling... reason: file '/home/AOC2023/aoc2023_036/final/memory32x20.sv' is newer than expected.
+	expected: Mon Jun 19 03:08:30 2023
+	actual:   Mon Jun 19 03:19:15 2023
+file: sram_l1cache.sv
+	module worklib.sram_wrap_l1:sv
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+        .din0(data_in),
+                    |
+xmelab: *W,CUVMPW (./sram_l1cache.sv,55|20): port sizes differ in port connection(32/33) for the instance(sram_wrap_l1) .
+        .dout0(data_out_temp)
+                           |
+xmelab: *W,CUVMPW (./sram_l1cache.sv,56|27): port sizes differ in port connection(32/33) for the instance(sram_wrap_l1) .
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.block:v <0x13ee19aa>
-			streams:   0, words:     0
-		worklib.systolic_array:v <0x65a288e9>
-			streams:   0, words:     0
+		worklib.sky130_sram_1kbyte_1rw_32x256_8:v <0x5ee0b32e>
+			streams:   3, words:  6337
+		worklib.sram_wrap_l1:sv <0x2a653b42>
+			streams:   5, words:  1095
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
-		              Instances  Unique
-		Modules:             82       2
-		Registers:          245       5
-		Vectored wires:      81       -
-		Always blocks:       82       2
-		Cont. assignments:    0       1
-	Writing initial simulation snapshot: worklib.systolic_array:v
-Loading snapshot worklib.systolic_array:v .................... Done
+		             Instances  Unique
+		Modules:             2       2
+		Registers:          14      14
+		Scalar wires:        3       -
+		Expanded wires:     33       1
+		Vectored wires:      2       -
+		Always blocks:       4       4
+		Compilation units:   1       1
+	Writing initial simulation snapshot: worklib.sram_wrap_l1:sv
+Loading snapshot worklib.sram_wrap_l1:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 *Verdi* Loading libsscore_xcelium171.so
 xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/xcelium/files/xmsimrc
 xcelium> run
 xmsim: *W,RNQUIE: Simulation is complete.
 xcelium> exit
-TOOL:	xmverilog	22.03-s003: Exiting on Jun 19, 2023 at 03:55:50 CST  (total: 00:00:00)
+TOOL:	xmverilog	22.03-s003: Exiting on Jun 19, 2023 at 14:41:54 CST  (total: 00:00:00)

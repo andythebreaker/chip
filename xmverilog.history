@@ -17,3 +17,9 @@ s16(19Jun2023:03:53:26):  ncverilog systolic_array.v
 s17(19Jun2023:03:54:34):  ncverilog systolic_array.v 
 s18(19Jun2023:03:54:55):  ncverilog systolic_array.v 
 s19(19Jun2023:03:55:50):  ncverilog systolic_array.v 
+s20(19Jun2023:14:40:04):  ncverilog sram_l1cache.sv 
+s21(19Jun2023:14:40:23):  ncverilog sky130_sram_1kbyte_1rw_32x256_8.v 
+s22(19Jun2023:14:40:27):  ncverilog sram_l1cache.sv 
+s23(19Jun2023:14:41:08):  ncverilog sram_l1cache.sv 
+s24(19Jun2023:14:41:25):  ncverilog sram_l1cache.sv 
+s25(19Jun2023:14:41:54):  ncverilog sram_l1cache.sv 

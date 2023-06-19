@@ -49,7 +49,7 @@ LC_MEASUREMENT=lzh_TW
 _CONDA_EXE=/home/AOC2023/aoc2023_036/anaconda3/bin/conda
 LC_IDENTIFICATION=lzh_TW
 OSTYPE=linux
-PWD=/home/AOC2023/aoc2023_036/final
+PWD=/home/AOC2023/aoc2023_036/final/a_goinside/chip
 CONDA_EXE=/home/AOC2023/aoc2023_036/anaconda3/bin/conda
 SSH_CONNECTION=140.116.133.20 3203 140.116.164.70 22
 LC_NUMERIC=lzh_TW
@@ -81,11 +81,11 @@ IMPERAS_PORT_FILE=.vsp_ovp_gdb_port
 TCL_LIBRARY=/usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/inca/files/tcl/library
 Runtime command line arguments:
 argv[0]=xmverilog
-argv[1]=systolic_array.v
+argv[1]=sram_l1cache.sv
 84 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.020 user,  107.60M sys,  0.00M vm
+          CPU/Mem usage: 0.060 sys,  0.020 user,  110.01M sys,  0.00M vm
 85 VC callback profile - scalar:0 vector:0
-86 Mon Jun 19 03:55:50 2023
+86 Mon Jun 19 14:41:54 2023
 87 pliAppInit
 88 FSDB_GATE is disabled.
 89 Enable Parallel Dumping.
