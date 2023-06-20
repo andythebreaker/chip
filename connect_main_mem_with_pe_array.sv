@@ -31,11 +31,9 @@ module array_processing;
   initial begin
     // Initialize x array with values
     
-    // Add your code here to initialize the x array with 224x224 integer values
-    // For example:
-    // x[0][0] = 1;
-    // x[0][1] = 2;
-    // ...
+    // initialize the x array with 224x224 integer values
+//=============TB=================
+//================================
     
     // Reset n and m
     n = 0;
@@ -46,14 +44,14 @@ module array_processing;
     $display("n = %d, m = %d", n, m);
     // Display the values of n and m after simulation
     
-    // Add your code here to display the values of n and m after the simulation
-    // For example:
+    // display the values of n and m after the simulation
+    // 
     // $display("n = %d, m = %d", n, m);
     
     // Display the values of y array
     
-    // Add your code here to display the values of the y array
-    // For example:
+    // display the values of the y array
+    // 
     // $display("y[0][0] = %d, y[0][1] = %d, ...", y[0][0], y[0][1], ...);
     
     $finish;

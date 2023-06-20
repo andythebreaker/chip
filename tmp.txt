@@ -1,0 +1,47 @@
+module SRAM_32bit (
+  input wire clk,        // Clock signal
+  input wire write_en,   // Write enable signal
+  input wire [4:0] addr, // Address input (5 bits for 32 locations)
+  input wire [31:0] data_in, // Data input (32 bits)
+  output reg [31:0] data_out // Data output (32 bits)
+);
+
+  reg [31:0] mem [0:31]; // 32x32 memory array
+
+  always @(posedge clk) begin
+    if (write_en) begin
+      mem[addr] <= data_in; // Write data to the specified address
+    end
+    data_out <= mem[addr]; // Read data from the specified address
+  end
+
+endmodule
+
+
+module DRAM_32bit (
+  input wire clk,       // Clock input
+  input wire rst,       // Reset input
+  
+  input wire cs,        // Chip select input
+  input wire we,        // Write enable input
+  input wire oe,        // Output enable input
+  input wire [9:0] addr, // Address input
+  inout wire [31:0] data // Data input/output
+);
+
+  reg [31:0] memory [0:1023]; // Memory array
+
+  always @(posedge clk or posedge rst) begin
+    if (rst) begin
+      // Reset memory to all zeros
+      memory <= '{32{1'b0}};
+    end else if (cs && we) begin
+      // Write operation
+      memory[addr] <= data;
+    end else if (cs && oe) begin
+      // Read operation
+      data <= memory[addr];
+    end
+  end
+
+endmodule
