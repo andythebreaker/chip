@@ -48,7 +48,7 @@ module sram_wrap_l1(
 
 initial begin
 $fsdbDumpfile("sram_wrap_l1_64_1024.fsdb");
-$fsdbDumpvars("+all");
+$fsdbDumpvars(0,uut);
 end
 
 // Clock generation

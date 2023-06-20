@@ -1,11 +1,11 @@
 xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xmverilog	22.03-s003: Started on Jun 20, 2023 at 10:24:47 CST
+TOOL:	xmverilog	22.03-s003: Started on Jun 20, 2023 at 10:32:09 CST
 ncverilog
 	sram_l1cache_64_1024_tb.sv
 xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
 Recompiling... reason: file './sram_l1cache_64_1024_tb.sv' is newer than expected.
-	expected: Tue Jun 20 10:20:27 2023
-	actual:   Tue Jun 20 10:24:43 2023
+	expected: Tue Jun 20 10:24:43 2023
+	actual:   Tue Jun 20 10:32:01 2023
 file: sram_l1cache_64_1024_tb.sv
         .din0({0'b0,data_in}),
                |
@@ -23,7 +23,7 @@ xmelab: *W,CUVMPW (./sram_l1cache_64_1024.sv,65|27): port sizes differ in port c
 xmelab: *W,CUVMPW (./sram_l1cache_64_1024.sv,64|14): port sizes differ in port connection(96/65) for the instance(sram_l1cache_64_1024_tb.uut) .
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.sram_l1cache_64_1024_tb:sv <0x4d5d9338>
+		worklib.sram_l1cache_64_1024_tb:sv <0x41e71d50>
 			streams:   3, words:  8528
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
@@ -54,18 +54,7 @@ FSDB Dumper for Xcelium, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
 ***********************************************************************
 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
 *Verdi* : Create FSDB file 'sram_wrap_l1_64_1024.fsdb'
-*Verdi* : Begin traversing the scopes, layer (0).
-*Verdi* : Enable +all dumping.
-*Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.clk(48)
-*Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.rst_n(48)
-*Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.addr(48)
-*Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.data_in(48)
-*Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.we(48)
-*Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.csb(48)
-*Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.wmask(48)
-*Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.count(48)
-*Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.data_out(36)
-*Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.data_ready(36)
+*Verdi* : Begin traversing the scope (sram_l1cache_64_1024_tb.uut), layer (0).
 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.data_out(48)
 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.data_ready(48)
 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.KEEP_ZERO_spare_wen0(48)
@@ -120,4 +109,4 @@ data_out is                   77, and the count is    9, data redy 0
 Simulation complete via $finish(1) at time 61 NS + 0
 ./sram_l1cache_64_1024_tb.sv:94 #2 $finish;
 xcelium> exit
-TOOL:	xmverilog	22.03-s003: Exiting on Jun 20, 2023 at 10:24:47 CST  (total: 00:00:00)
+TOOL:	xmverilog	22.03-s003: Exiting on Jun 20, 2023 at 10:32:10 CST  (total: 00:00:01)
