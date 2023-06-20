@@ -63,8 +63,8 @@ GIT_ASKPASS=/home/AOC2023/aoc2023_036/.vscode-server/bin/695af097c7bd098fbf017ce
 VSCODE_GIT_ASKPASS_NODE=/home/AOC2023/aoc2023_036/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/node
 VSCODE_GIT_ASKPASS_EXTRA_ARGS=
 VSCODE_GIT_ASKPASS_MAIN=/home/AOC2023/aoc2023_036/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass-main.js
-VSCODE_GIT_IPC_HANDLE=/run/user/1315/vscode-git-beb006ac34.sock
-VSCODE_IPC_HOOK_CLI=/run/user/1315/vscode-ipc-cd8d24e4-ab82-4b0f-9ec5-6b9bb7a6c17d.sock
+VSCODE_GIT_IPC_HANDLE=/run/user/1315/vscode-git-231ba90a86.sock
+VSCODE_IPC_HOOK_CLI=/run/user/1315/vscode-ipc-468c4ea7-5405-469c-a5be-3c345166c42b.sock
 TERM=xterm-256color
 LD_LIBRARY_PATH=/usr/cad/synopsys/verdi/2019.06//share/PLI/IUS/LINUX64
 LM_LICENSE_FILE=26585@lstn:5280@lstn:
@@ -81,70 +81,114 @@ IMPERAS_PORT_FILE=.vsp_ovp_gdb_port
 TCL_LIBRARY=/usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/inca/files/tcl/library
 Runtime command line arguments:
 argv[0]=xmverilog
-argv[1]=sram_l1cache_tb.sv
-argv[2]=+access+r
-85 profile - 100
-          CPU/Mem usage: 0.040 sys,  0.010 user,  110.08M sys,  0.00M vm
-86 VC callback profile - scalar:0 vector:0
-87 Mon Jun 19 20:39:35 2023
-88 pliAppInit
-89 FSDB_GATE is disabled.
-90 Enable Parallel Dumping.
-91 pliAppMiscSet: New Sim Round
-92 pliEntryInit
-93 LIBSSCORE=found /usr/cad/synopsys/verdi/2019.06//share/PLI/IUS/LINUX64/libsscore_xcelium171.so through $LD_LIBRARY_PATH setting.
-94 argv[0]: sram_wrap_l1.fsdb
-95 argv[0]: +all
-96 FSDB Dumper for Xcelium, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
-97 (C) 1996 - 2019 by Synopsys, Inc.
-98 ***********************************************************************
-99 *  WARNING -                                                          *
-100 *  The simulator version is newer than the FSDB Writer version which  *
-101 *  may cause abnormal behavior, please contact Cadence support for    *
-102 *  assistance.                                                        *
-103 ***********************************************************************
-104 sps_call_fsdbDumpfile at 0 : /home/AOC2023/aoc2023_036/final/a_goinside/chip/sram_l1cache_tb.sv(53)
-105 argv[0]: sram_wrap_l1.fsdb
-106 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-107 *Verdi* : Create FSDB file 'sram_wrap_l1.fsdb'
-108 sps_call_fsdbDumpvars at 0 : /home/AOC2023/aoc2023_036/final/a_goinside/chip/sram_l1cache_tb.sv(54)
-109 argv[0]: +all
-110 *Verdi* : Begin traversing the scopes, layer (0).
-111 *Verdi* : Enable +all dumping.
-112 *Verdi* : End of traversing.
-113 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.050 sys,  0.010 user,  197.54M sys,  0.00M vm
-                   incr: 0.000 sys,  0.000 user,  4.30M sys,  0.00M vm
-                   accu: 0.000 sys,  0.000 user,  4.30M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.000 user,  4.30M sys,  0.00M vm
+argv[1]=sram_l1cache_64_1024_tb.sv
+84 profile - 100
+          CPU/Mem usage: 0.030 sys,  0.030 user,  110.08M sys,  0.00M vm
+85 VC callback profile - scalar:0 vector:0
+86 Tue Jun 20 10:24:47 2023
+87 pliAppInit
+88 FSDB_GATE is disabled.
+89 Enable Parallel Dumping.
+90 pliAppMiscSet: New Sim Round
+91 pliEntryInit
+92 LIBSSCORE=found /usr/cad/synopsys/verdi/2019.06//share/PLI/IUS/LINUX64/libsscore_xcelium171.so through $LD_LIBRARY_PATH setting.
+93 argv[0]: sram_wrap_l1_64_1024.fsdb
+94 argv[0]: +all
+95 FSDB Dumper for Xcelium, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+96 (C) 1996 - 2019 by Synopsys, Inc.
+97 ***********************************************************************
+98 *  WARNING -                                                          *
+99 *  The simulator version is newer than the FSDB Writer version which  *
+100 *  may cause abnormal behavior, please contact Cadence support for    *
+101 *  assistance.                                                        *
+102 ***********************************************************************
+103 sps_call_fsdbDumpfile at 0 : /home/AOC2023/aoc2023_036/final/a_goinside/chip/sram_l1cache_64_1024_tb.sv(50)
+104 argv[0]: sram_wrap_l1_64_1024.fsdb
+105 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+106 *Verdi* : Create FSDB file 'sram_wrap_l1_64_1024.fsdb'
+107 sps_call_fsdbDumpvars at 0 : /home/AOC2023/aoc2023_036/final/a_goinside/chip/sram_l1cache_64_1024_tb.sv(51)
+108 argv[0]: +all
+109 *Verdi* : Begin traversing the scopes, layer (0).
+110 *Verdi* : Enable +all dumping.
+111 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.clk(48)
+112 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.rst_n(48)
+113 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.addr(48)
+114 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.data_in(48)
+115 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.we(48)
+116 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.csb(48)
+117 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.wmask(48)
+118 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.count(48)
+119 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.data_out(36)
+120 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.data_ready(36)
+121 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.data_out(48)
+122 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.data_ready(48)
+123 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.KEEP_ZERO_spare_wen0(48)
+124 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.fsm_state(48)
+125 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.prev_we(48)
+126 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.prev_csb(48)
+127 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.dbg(48)
+128 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.prev_dbg(48)
+129 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.dbgf(48)
+130 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.clk_count(48)
+131 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.clk_2x(48)
+132 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.clk(36)
+133 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.rst_n(36)
+134 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.addr(36)
+135 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.data_in(36)
+136 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.we(36)
+137 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.csb(36)
+138 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.wmask(36)
+139 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.data_out_temp(36)
+140 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.data_ready_temp(36)
+141 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.dout0(48)
+142 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.csb0_reg(48)
+143 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.web0_reg(48)
+144 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.wmask0_reg(48)
+145 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.spare_wen0_reg(48)
+146 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.addr0_reg(48)
+147 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.din0_reg(48)
+148 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.mem(116)
+149 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.clk0(36)
+150 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.csb0(36)
+151 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.web0(36)
+152 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.wmask0(36)
+153 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.spare_wen0(36)
+154 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.addr0(36)
+155 *Verdi* WARNING: [NoReadAccess][FilterOut]Name:sram_l1cache_64_1024_tb.uut.sram_1rw_64x1024_8_inst.din0(36)
+156 *Verdi* : End of traversing.
+157 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.030 sys,  0.030 user,  196.72M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  3.48M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  3.48M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  3.48M sys,  0.00M vm
 
-          Count usage: 587 var,  583 idcode,  583 callback
-                 incr: 587 var,  583 idcode,  583 callback
-                 accu: 587 var,  583 idcode,  583 callback
-            accu incr: 587 var,  583 idcode,  583 callback
-114 VC callback profile - scalar:0 vector:0
-115 Mon Jun 19 20:39:35 2023
-116 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.050 sys,  0.010 user,  198.59M sys,  0.00M vm
-                   incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
-                   accu: 0.000 sys,  0.000 user,  5.35M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
-
-          Count usage: 587 var,  583 idcode,  583 callback
+          Count usage: 0 var,  0 idcode,  0 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 587 var,  583 idcode,  583 callback
+                 accu: 0 var,  0 idcode,  0 callback
             accu incr: 0 var,  0 idcode,  0 callback
-117 VC callback profile - scalar:54 vector:529
-118 Mon Jun 19 20:39:35 2023
-119 End of simulation at 61
-120 VC callback profile - scalar:379 vector:663
-121 Mon Jun 19 20:39:35 2023
-122 Begin FSDB profile info:
-123 FSDB Writer : bc1(379) bcn(663) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.013288) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+158 VC callback profile - scalar:0 vector:0
+159 Tue Jun 20 10:24:47 2023
+160 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.030 sys,  0.030 user,  196.72M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  3.48M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 0 var,  0 idcode,  0 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 0 var,  0 idcode,  0 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+161 VC callback profile - scalar:0 vector:0
+162 Tue Jun 20 10:24:47 2023
+163 End of simulation at 61
+164 VC callback profile - scalar:0 vector:0
+165 Tue Jun 20 10:24:47 2023
+166 Begin FSDB profile info:
+167 FSDB Writer : bc1(0) bcn(0) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.009283) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-124 End FSDB profile info
-125 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
-126                        ProduceTime:0.078586217 ConsumerTime:0.000000000 Buffer:64MB
-127 SimExit
-128 Sim process exit
+168 End FSDB profile info
+169 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
+170                        ProduceTime:0.071940898 ConsumerTime:0.000000000 Buffer:64MB
+171 SimExit
+172 Sim process exit
