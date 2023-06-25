@@ -70,9 +70,10 @@ State state;
 
 always_ff @( posedge clock || posedge rst ) begin : blockName
     if (rst) begin
-        main_index <= 0;
+        //main_index <= 0;
         trigger_prev <= `FALSE;
         state <= idle;
+        data_ready_cpu<=`FALSE;
     end
     else if ((state==idle)&&((trigger==`TRUE)&&(trigger_prev==`FALSE))) begin
         trigger_prev<=trigger;
@@ -80,38 +81,24 @@ always_ff @( posedge clock || posedge rst ) begin : blockName
         we <= `TRUE;
         csb <= `FALSE;
         state <= wait_mem;
-        /*
-        寫入動作
-            #2 addr=`ADDR_WIDTH_'d48;//read command start
-            #2 we=1;
-            #2 csb=0;
-            // wait until data_ready is 1 then fetch data_out, also display in command line
-            #2 while((data_ready==0)&&(count<8'd80)) begin
-            #1 $display("data_ready is %d",data_ready);
-            count=count+1;
-            end
-            #2 $display("data_out is %d, and the count is %d, data redy %b",data_out,count,data_ready);
-            #2 csb=1;
-            #2 we=0;//read command end
-            */
     end else if ((state==wait_mem)&&(data_ready_mem==`TRUE)) begin
-p<=((main_index%NUMBERS_IN_A_ROW_OF_MEM)==0)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx0_end:`SPLIT_DATA_IN_MEM_ROW_idx0_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==1)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx1_end:`SPLIT_DATA_IN_MEM_ROW_idx1_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==2)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx2_end:`SPLIT_DATA_IN_MEM_ROW_idx2_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==3)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx3_end:`SPLIT_DATA_IN_MEM_ROW_idx3_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==4)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx4_end:`SPLIT_DATA_IN_MEM_ROW_idx4_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==5)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx5_end:`SPLIT_DATA_IN_MEM_ROW_idx5_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==6)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx6_end:`SPLIT_DATA_IN_MEM_ROW_idx6_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==7)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx7_end:`SPLIT_DATA_IN_MEM_ROW_idx7_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==8)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx8_end:`SPLIT_DATA_IN_MEM_ROW_idx8_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==9)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx9_end:`SPLIT_DATA_IN_MEM_ROW_idx9_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==10)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx10_end:`SPLIT_DATA_IN_MEM_ROW_idx10_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==11)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx11_end:`SPLIT_DATA_IN_MEM_ROW_idx11_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==12)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx12_end:`SPLIT_DATA_IN_MEM_ROW_idx12_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==13)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx13_end:`SPLIT_DATA_IN_MEM_ROW_idx13_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==14)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx14_end:`SPLIT_DATA_IN_MEM_ROW_idx14_start]:
-((main_index%NUMBERS_IN_A_ROW_OF_MEM)==15)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx15_end:`SPLIT_DATA_IN_MEM_ROW_idx15_start]:
-4'0000;//如果落到這裡，代表有問題
+p<=(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==0)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx0_end:`SPLIT_DATA_IN_MEM_ROW_idx0_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==1)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx1_end:`SPLIT_DATA_IN_MEM_ROW_idx1_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==2)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx2_end:`SPLIT_DATA_IN_MEM_ROW_idx2_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==3)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx3_end:`SPLIT_DATA_IN_MEM_ROW_idx3_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==4)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx4_end:`SPLIT_DATA_IN_MEM_ROW_idx4_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==5)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx5_end:`SPLIT_DATA_IN_MEM_ROW_idx5_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==6)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx6_end:`SPLIT_DATA_IN_MEM_ROW_idx6_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==7)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx7_end:`SPLIT_DATA_IN_MEM_ROW_idx7_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==8)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx8_end:`SPLIT_DATA_IN_MEM_ROW_idx8_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==9)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx9_end:`SPLIT_DATA_IN_MEM_ROW_idx9_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==10)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx10_end:`SPLIT_DATA_IN_MEM_ROW_idx10_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==11)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx11_end:`SPLIT_DATA_IN_MEM_ROW_idx11_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==12)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx12_end:`SPLIT_DATA_IN_MEM_ROW_idx12_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==13)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx13_end:`SPLIT_DATA_IN_MEM_ROW_idx13_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==14)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx14_end:`SPLIT_DATA_IN_MEM_ROW_idx14_start]:
+(((x*y*z)%NUMBERS_IN_A_ROW_OF_MEM)==15)?data_out[`SPLIT_DATA_IN_MEM_ROW_idx15_end:`SPLIT_DATA_IN_MEM_ROW_idx15_start]:
+4'b0000;//如果落到這裡，代表有問題
 csb<=`TRUE;
 we<=`FALSE;
 state<=wait_one;
@@ -124,9 +111,10 @@ data_ready_cpu<=`TRUE;
         trigger_prev<=trigger;
     end else begin
         // do every thing same as rst
-        main_index <= 0;
+        //main_index <= 0;
         trigger_prev <= `FALSE;
         state <= idle;
+        data_ready_cpu<=`FALSE;
     end
 end
 
