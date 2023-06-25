@@ -4,6 +4,7 @@ input trigger, when trigger filps from 0 to 1, the function will start to work
 output is the value of pixel, where value is in 4 bits
 output data_ready, hold for at least 1 clock cycle when the output is valid
 */
+//TODO 感覺這裡dram存取真的要改成32诶
 `define M1(x) (x-1)
 `define M2(x) (x-2)
 `define TRUE 1'b1
