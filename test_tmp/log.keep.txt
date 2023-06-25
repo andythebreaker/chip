@@ -1,0 +1,69 @@
+Microsoft Windows [版本 10.0.19045.3086]
+(c) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+C:\Users\bear>cd Desktop
+
+C:\Users\bear\Desktop>cd ff
+
+C:\Users\bear\Desktop\ff>cd chip
+
+C:\Users\bear\Desktop\ff\chip>cd .git
+
+C:\Users\bear\Desktop\ff\chip\.git>cd ..
+
+C:\Users\bear\Desktop\ff\chip>cd test_tmp
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>C:\Users\bear\Desktop\sv2v-Windows\sv2v-Windows\sv2v.exe prev_test.sv -w adjacent
+prev_test.sv:11:28: Parse error: unexpected token 'posedge' (KW_posedge)
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>C:\Users\bear\Desktop\sv2v-Windows\sv2v-Windows\sv2v.exe prev_test.sv -w adjacent
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>icverilog
+'icverilog' 不是內部或外部命令、可執行的程式或批次檔。
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>icarus
+'icarus' 不是內部或外部命令、可執行的程式或批次檔。
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>iverilog
+iverilog: no source files.
+
+Usage: iverilog [-ESvV] [-B base] [-c cmdfile|-f cmdfile]
+                [-g1995|-g2001|-g2005|-g2005-sv|-g2009|-g2012] [-g<feature>]
+                [-D macro[=defn]] [-I includedir]
+                [-M [mode=]depfile] [-m module]
+                [-N file] [-o filename] [-p flag=value]
+                [-s topmodule] [-t target] [-T min|typ|max]
+                [-W class] [-y dir] [-Y suf] source_file(s)
+
+See the man page for details.
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>iverilog prev_test_.v
+prev_test_.v: No such file or directory
+No top level modules, and no -s option.
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>iverilog prev_test.v
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>iverilog prev_test_tb.v
+prev_test_tb.v:11: error: Unknown module type: prev_test
+2 error(s) during elaboration.
+*** These modules were missing:
+        prev_test referenced 1 times.
+***
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>iverilog prev_test_tb.v
+prev_test_tb.v:1: warning: macro import undefined (and assumed null) at this point.
+prev_test_tb.v:1: syntax error
+I give up.
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>iverilog prev_test_tb.v
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>iverilog -o wtf.o prev_test_tb.v
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>vvp wtf.o
+Time:                    5 | x:           0 | prev:           x | diff:           x
+Time:                   15 | x:          10 | prev:           0 | diff:           x
+Time:                   25 | x:          -5 | prev:          10 | diff:          10
+Time:                   35 | x:          20 | prev:          -5 | diff:         -15
+Time:                   45 | x:          20 | prev:          20 | diff:          25
+
+C:\Users\bear\Desktop\ff\chip\test_tmp>
